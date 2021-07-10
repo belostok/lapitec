@@ -1,0 +1,602 @@
+@import 'variables'			
+
+section
+	position: relative
+button
+	padding: 0
+	border: none
+	background: transparent
+p, h1, h2, h3, h4
+	margin: 0
+ul
+	margin: 0
+	padding: 0
+li
+	list-style-type: none
+a
+	text-decoration: none
+	color: $black
+	display: block
+	&:hover, &:active
+		color: $black
+input, textarea, button, a
+	outline: none
+
+strong
+	font-family: $bold
+
+h2
+	font: 26px/33px $bold
+	letter-spacing: .3em
+	text-transform: uppercase
+h3
+	text-transform: uppercase
+	font-family: $bold
+
+.container
+	max-width: 1440px
+	padding: 0
+.row
+	margin: 0
+.col
+	padding: 0
+.fitCover
+	position: relative
+	object-fit: cover
+	width: 100%
+	height: 100%
+.fitContain
+	position: relative
+	object-fit: contain
+	width: 100%
+	height: 100%
+.dec
+	position: absolute
+.absolute
+	position: absolute
+	left: 0
+	right: 0
+	top: 0
+	bottom: 0
+
+form
+	width: 100%
+
+input[type='radio']
+	position: absolute
+	z-index: -1
+	opacity: 0
+input[type='text'],
+input[type='email']
+	border: none
+	border-bottom: 2px solid $black
+	width: 100%
+	padding: 22px 35px
+	font: 18px/110% $regular
+	color: $black
+
+.button
+	font-size: 12px
+	line-height: 15px
+	background: $black
+	padding: 10px 40px
+	color: $white
+
+#sandwich
+	display: none
+	width: 29px
+	height: 16px
+	z-index: 9
+	.sw-topper 
+		position: relative
+		top: 0
+		width: 29px
+		height: 1px
+		background: $white
+		border: none
+		border-radius: 4px
+		transition: transform 0.5s, top 0.2s, background .5s
+	.sw-bottom
+		position: relative
+		width: 29px
+		height: 1px
+		top: 7px
+		background: $white
+		border: none
+		border-radius: 4px
+		transition: transform 0.5s, top 0.2s, background .5s
+		transition-delay: 0.2s, 0s
+	.sw-footer
+		position: relative
+		width: 29px
+		height: 1px
+		top: 14px
+		background: $white
+		border: none
+		border-radius: 4px
+		transition: all 0.5s
+		transition-delay: 0.1s
+	&.active
+		.sw-topper
+			top: 8px
+			background: $black
+			transform: rotate(135deg)
+		.sw-bottom
+			top: 7px
+			background: $black
+			transform: rotate(-135deg)
+		.sw-footer
+			opacity: 0
+			top: 0
+			transform: rotate(180deg)
+
+.isMobile
+	display: none !important
+
+.adaptHeightInner
+	position: relative
+	height: 0
+	border: none
+.adaptHeightContent
+	position: absolute
+	left: 0
+	right: 0
+	top: 0
+	bottom: 0
+
+.leftCol, .rightCol
+	height: 100%
+	position: relative
+	
+.rotate
+	transform: rotate(-90deg)
+.sideTitle
+	position: absolute
+	transform: rotate(-90deg)
+	width: max-content
+	height: 0
+	left: 0
+	right: 0
+	margin: 0 auto
+	display: flex
+	p
+		font-family: $bold
+		text-transform: lowercase
+		position: relative
+		display: flex
+		align-items: center
+		&::after
+			content: ''
+			width: 111px
+			height: 3px
+			background: $black
+			margin-left: 40px
+
+body, html
+	max-width: 100%
+	overflow-x: hidden
+body
+	font-family: $regular
+	background: $white
+	color: $black
+	font-size: 16px
+	line-height: 20px
+
+header
+	position: fixed
+	width: 100%
+	left: 0
+	right: 0
+	top: 0
+	background: $white
+	z-index: 3
+	.wrapper
+		width: 100%
+		display: flex
+		justify-content: space-between
+		align-items: center
+		padding: 30px 2.9%
+	.rightSide
+		display: flex
+	.contacts
+		display: flex
+		align-items: center
+		margin-right: 100px
+		.phone
+			margin-right: 60px
+			a
+				letter-spacing: .1em
+	.menuButton
+		button
+			display: flex
+			align-items: center
+			p
+				margin-right: 16px
+				letter-spacing: .1em
+
+#title
+	margin-top: 123px
+	.leftCol
+		.social
+			display: flex
+			position: absolute
+			left: 0
+			right: 0
+			bottom: 295px
+			margin: 0 auto
+			.item
+				letter-spacing: .1em
+				text-transform: lowercase
+				padding: 10px
+				display: flex
+				align-items: center
+				&:not(:last-child)
+					margin-right: 80px
+				svg
+					margin-right: 15px	
+	.rightCol
+		width: 100%
+		svg
+			position: absolute
+			left: 0
+			right: 0
+			bottom: 265px
+			margin: 0 auto		
+	.contentCol
+		.titleHeight
+			padding-top: 64%
+		.wrapper
+			width: 100%
+			height: 100%
+			padding: 0 10%
+			position: relative
+			display: flex
+			align-items: center
+			&::before
+				content: ''
+				position: absolute
+				left: 0
+				right: 0
+				top: 0
+				bottom: 0
+				background-image: url(../img/title-bg.jpg)
+				background-repeat: no-repeat
+				background-size: cover
+			.title
+				position: relative
+				color: $white
+				text-transform: uppercase
+				h1
+					font: 16px/150% $light
+					letter-spacing: .3em
+					margin-bottom: 20px
+				& > p
+					font-size: 24px
+					line-height: 150%
+					letter-spacing: .3em
+					text-transform: uppercase
+					strong
+						font-size: 28px
+						display: block
+				.titleButton
+					width: 307px
+					height: 89px
+					border: 1px solid rgba(255,255,255,.3)
+					display: flex
+					align-items: center
+					justify-content: center
+					margin-top: 215px
+					p
+						font-size: 14px
+						line-height: 150%
+						letter-spacing: .3em
+						text-transform: uppercase
+						color: $white
+						margin-right: 53px
+						strong
+							display: block
+
+#advantages
+	margin-top: 110px
+	padding-bottom: 90px
+	&::before
+		content: ''
+		position: absolute
+		left: 0
+		right: 0
+		bottom: 0
+		top: -315px
+		background: $gray
+		z-index: -1
+	.sideTitle
+		top: 218px
+	.title
+		padding-left: 50px
+		margin-bottom: 70px
+	.advantages
+		position: relative
+		.row
+			margin: 0 -5px
+		.col
+			padding: 0 5px
+		.item
+			width: 100%
+			padding-top: 86%
+			overflow: hidden
+			position: relative
+			margin-bottom: 10px
+			&.active
+				.mask
+					opacity: 1
+			.mask
+				position: absolute
+				left: 0
+				right: 0
+				top: 0
+				bottom: 0
+				background: linear-gradient(0deg, rgba(121, 106, 99, 0.9), rgba(121, 106, 99, 0.9))
+				opacity: 0
+				transition: opacity .3s ease
+			.text
+				position: absolute
+				left: 0
+				right: 0
+				bottom: -100%
+				height: max-content
+				color: $white
+				padding: 0 35px 30px
+				transition: bottom .3s ease
+				h3
+					font-size: 20px
+					line-height: 25px
+					letter-spacing: .15em
+					position: absolute
+					top: -50px
+					left: 30px
+					right: 30px
+				p
+					font-size: 14px
+					line-height: 18px
+#projects
+	margin-top: 110px
+	.titleContainer
+		margin-bottom: 60px
+		display: flex
+		align-items: flex-start
+		.title
+			h2
+				display: flex
+				align-items: flex-start
+				&::after
+					content: ''
+					height: 3px
+					width: 103px
+					background: $black
+					margin-top: 15px
+					margin-left: 54px
+		.projectsTitleSlider
+			margin-left: 54px
+			.item
+				display: flex
+				.name
+					display: flex
+					width: min-content
+					max-width: 25%
+					&::after
+						content: ''
+						height: 3px
+						width: 103px
+						background: $black
+						margin-top: 15px
+						margin-left: 54px
+				.material
+					margin-left: 54px
+					padding-top: 5px
+					max-width: 24%
+					h3
+						font-size: 16px
+						line-height: 20px
+						letter-spacing: 0.1em
+						text-transform: none
+	.sideTitle
+		z-index: 2
+	.sliderContainer
+		width: 100%
+		position: relative
+		.navigation
+			width: 152px
+			height: 76px
+			position: absolute
+			left: 840px
+			top: 55px
+			display: flex
+			z-index: 2
+			.prev, .next
+				width: calc(50% + 1px)
+				height: 100%
+				display: flex
+				justify-content: center
+				align-items: center
+				cursor: pointer
+				border: 2px solid $black
+				background: $white
+			.next
+				margin-left: -2px
+		.swiper-slide
+			width: 830px
+			height: 100%
+			opacity: 1
+			transition: opacity .5s
+			.item
+				img
+					width: 386px
+					height: 270px
+			&:not(.swiper-slide-prev):not(.swiper-slide-next):not(.swiper-slide-active)
+				opacity: 0
+			&:not(.swiper-slide-active)
+				cursor: pointer
+				.item
+					pointer-events: none				
+		.swiper-slide-active
+			.item
+				img
+					width: 100%
+					height: 100%
+		.swiper-slide-prev
+			opacity: .5
+			.item
+				justify-content: flex-end
+				img
+					height: 270px
+					width: 386px
+		.swiper-slide-next
+			opacity: .5
+			.item
+				img
+					height: 430px
+					width: 620px
+		.item
+			width: 100%
+			height: 570px
+			display: flex
+			align-items: flex-end
+			overflow: hidden
+			img
+				transition: width .5s, height .5s
+#use
+	margin-top: 110px
+	.title
+		display: flex
+		margin-bottom: 90px
+		h2
+			margin-right: 115px
+		.description
+			p
+				font-size: 14px
+				line-height: 18px
+			a
+				margin-top: 50px
+				text-decoration: underline
+	.use
+		padding: 100px 0 90px 120px
+		position: relative
+		&::before
+			content: ''
+			position: absolute
+			left: 0
+			top: 0
+			bottom: 0
+			right: -200%
+			background: $gray
+		.row
+			margin: 0 -5px
+		.col
+			padding: 0 5px
+		.adaptHeightInner
+			padding-top: 85%
+			margin-bottom: 10px
+		.item
+			width: 100%
+			height: 100%
+			display: flex
+			justify-content: center
+			align-items: center
+			h3
+				font-size: 18px
+				line-height: 23px
+				letter-spacing: 0.15em
+				position: relative
+				text-align: center
+
+#collections
+	margin-top: 100px
+	.title
+		margin-bottom: 90px
+	.collections
+		.row
+			margin: 0 -5px
+		.col
+			padding: 0 5px
+		.adaptHeightInner
+			padding-top: 150%
+		.item
+			width: 100%
+			height: 100%
+			position: relative
+			display: flex
+			align-items: flex-end
+			.text
+				padding: 60px
+				position: relative
+				h3
+					font-size: 20px
+					line-height: 25px
+					letter-spacing: .2em
+					margin-bottom: 60px
+
+#contacts
+	margin-top: 110px
+	.title
+		margin-bottom: 70px
+	.contacts
+		position: relative
+		padding: 100px 0 0 10%
+		&::before
+			content: ''
+			position: absolute
+			left: 0
+			right: -200%
+			bottom: 0
+			top: 0
+			background: $gray
+		.upperSide
+			position: relative
+			padding-bottom: 100px
+			border-bottom: 1px solid #796A63
+			.rowItem
+				&:not(:last-child)
+					margin-bottom: 80px	
+				.col
+					&:not(:first-child)
+						.item
+							padding-left: 20%			
+				h3
+					font-size: 16px
+					line-height: 20px
+					letter-spacing: .05em
+					margin-bottom: 40px
+				.item
+					max-width: 85%
+					strong
+						font-family: $semibold
+		.footer
+			position: relative
+			padding: 60px 8% 60px 0
+			width: 100%
+			display: flex
+			align-items: center
+			justify-content: space-between
+			nav
+				ul
+					display: flex
+					li
+						&:not(:last-child)
+							margin-right: 90px
+						a
+							padding: 7px 0
+							position: relative
+							&::after
+								content: ''
+								position: absolute
+								left: 0
+								right: 0
+								bottom: 0
+								height: 2px
+								background: #796A63
+			.copyright
+				p
+					font-size: 14px
+					line-height: 18px
+							
+
+			
