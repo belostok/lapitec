@@ -1,6 +1,11 @@
 const log = console.log
 const isMobile = window.matchMedia('(max-width: 768px)').matches
 
+const feedback = document.getElementById('feedback')
+const feedbackBtn = document.getElementById('feedbackBtn')
+const menu = document.getElementById('menu')
+const menuButton = document.getElementById('menuButton')
+
 const advantagesInit = () => {
     const advantagesItems = document.querySelectorAll('#advantages .item')
     Array.from(advantagesItems).forEach(e => {
@@ -30,18 +35,30 @@ const sideTitlesInit = () => {
     })
 }
 
-const classActive = (parent, el) => {
+const classActive = (el, el2) => {
     if (el.classList.contains('active')) {
         el.classList.remove('active')
     } else {
         el.classList.add('active')
     }
-    if (parent.classList.contains('active')) {
-        parent.classList.remove('active')
-    } else {
-        parent.classList.add('active')
+    if (el2) {
+        if (el2.classList.contains('active')) {
+            el2.classList.remove('active')
+        } else {
+            el2.classList.add('active')
+        }
     }
 }
+
+const menuInitClose = () => {
+    const menuHeight = menu.offsetHeight
+    const feedbackHeight = feedback.offsetHeight
+    menu.style.top = `-${menuHeight}px`
+    feedback.style.top = `-${feedbackHeight}px`
+    feedback.classList.remove('active')
+    feedbackBtn.classList.remove('active')
+}
+const menuOpen = m => m.style.top = 0
 
 const emailTest = i =>
     !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(i.value)
@@ -96,6 +113,7 @@ const formSend = async e => {
         if (response.ok) {
             // const result = await response.json()
             log('form sended')
+
             form.reset()
             form.classList.remove('_sending')
         } else {
@@ -120,7 +138,73 @@ document.addEventListener('DOMContentLoaded', () => {
     const currentYear = document.querySelector('.currentYear')
     currentYear.innerHTML = new Date().getFullYear()
 
-    // const sandwichBtn = document.getElementById('sandwich')
+    menuInitClose()
+    menuButton.addEventListener('click', () => {
+        if (menuButton.classList.contains('active')) {
+            menuInitClose() 
+            menu.classList.remove('active')
+            menuButton.classList.remove('active')
+        } else {
+            menuOpen(menu)
+            menu.classList.add('active')
+            menuButton.classList.add('active')
+        }
+    }) 
+
+    feedbackBtn.addEventListener('click', () => {
+        if (!feedback.classList.contains('active')) {
+            menu.classList.contains('active') && menu.classList.remove('active')
+            menuOpen(feedback)
+            menuButton.classList.add('active')
+        }
+        classActive(feedbackBtn, feedback)
+    })
+
+   
+    const projectsTitleSlider = new Swiper('.projectsTitleSlider', {
+        speed: 500,
+        spaceBetween: 20,
+        slidesPerView: 1,
+        loop: true,
+        allowTouchMove: false,
+        effect: 'fade',
+        fadeEffect: {
+            crossFade: true
+        }
+    })
+    const projectsSlides = document.querySelectorAll('.projectsSlider .swiper-slide')
+    const projectsSlider = new Swiper('.projectsSlider', {
+        speed: 500,
+        spaceBetween: 10,
+        slidesPerView: 'auto',
+        loop: true,
+        loopedSlides: projectsSlides.length,
+        slideToClickedSlide: true,
+        allowTouchMove: false,
+        thumbs: {
+            swiper: projectsTitleSlider
+        },
+        navigation: {
+            nextEl: '#projects .next',
+            prevEl: '#projects .prev'
+        }
+    })
+
+    const callbackForm = document.getElementById('callbackForm')
+    callbackForm.addEventListener('submit', formSend)
+
+})
+
+document.onreadystatechange = () => {
+    if (document.readyState === 'complete') {
+        advantagesInit()
+        sideTitlesInit()
+    }
+}
+
+
+
+ // const sandwichBtn = document.getElementById('sandwich')
     // const menu = document.querySelector('header .menu')
     // const menuHeight = window.getComputedStyle(menu).height
     // const menuItems = menu.querySelectorAll('li')
@@ -158,45 +242,3 @@ document.addEventListener('DOMContentLoaded', () => {
     //         }
     //     })
     // })
-
-
-    const projectsTitleSlider = new Swiper('.projectsTitleSlider', {
-        speed: 500,
-        spaceBetween: 20,
-        slidesPerView: 1,
-        loop: true,
-        effect: 'fade',
-        fadeEffect: {
-            crossFade: true
-        }
-    })
-    const projectsSlides = document.querySelectorAll('.projectsSlider .swiper-slide')
-    const projectsSlider = new Swiper('.projectsSlider', {
-        speed: 500,
-        spaceBetween: 10,
-        slidesPerView: 'auto',
-        loop: true,
-        loopedSlides: projectsSlides.length,
-        slideToClickedSlide: true,
-        allowTouchMove: false,
-        navigation: {
-            nextEl: '#projects .next',
-            prevEl: '#projects .prev'
-        }
-    })
-
-
-    // const signupForm = document.getElementById('signupForm')
-    // signupForm.addEventListener('submit', formSend)
-
-    // const signupBanForm = document.getElementById('signupBanForm')
-    // signupBanForm.addEventListener('submit', formSend)
-
-})
-
-document.onreadystatechange = () => {
-    if (document.readyState === 'complete') {
-        advantagesInit()
-        sideTitlesInit()
-    }
-}

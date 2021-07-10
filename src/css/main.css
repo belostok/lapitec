@@ -90,13 +90,17 @@ input[type=radio] {
   opacity: 0
 }
 input[type=email],
-input[type=text] {
+input[type=text],
+textarea {
   border: none;
   border-bottom: 2px solid #000;
   width: 100%;
-  padding: 22px 35px;
-  font: 18px/110% EuclidSquare-Regular;
-  color: #000
+  padding: 10px 20px;
+  font: 16px/18px EuclidSquare-Light
+}
+textarea {
+  resize: none;
+  height: 40px
 }
 .button {
   font-size: 12px;
@@ -228,7 +232,10 @@ input[type=text] {
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center
+  align-items: center;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto
 }
 .sideTitle p::after {
   content: '';
@@ -249,6 +256,89 @@ body {
   font-size: 16px;
   line-height: 20px
 }
+.topMenu {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  top: -100vh;
+  opacity: 0;
+  background-color: #fff;
+  background-image: url(../img/menu-bg.svg);
+  -webkit-transition: top .3s ease-out,opacity .2s;
+  -o-transition: top .3s ease-out,opacity .2s;
+  transition: top .3s ease-out,opacity .2s
+}
+.topMenu.active {
+  opacity: 1
+}
+#menu .wrapper {
+  padding: 158px 0 74px
+}
+#menu .upperSide {
+  margin-bottom: 70px
+}
+#menu .upperSide nav ul li:not(:last-child) {
+  margin-bottom: 40px
+}
+#menu .upperSide nav ul li a {
+  font: 22px/28px EuclidSquare-Bold;
+  letter-spacing: .3em;
+  text-transform: uppercase
+}
+#menu .lowerSide nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex
+}
+#menu .lowerSide nav ul li:not(:last-child) {
+  margin-right: 169px
+}
+#menu .lowerSide nav ul li a {
+  text-decoration: underline
+}
+#feedback .wrapper {
+  padding: 163px 0 143px
+}
+#feedback .wrapper .title {
+  max-width: 600px;
+  margin-bottom: 50px
+}
+#feedback .wrapper .title h3 {
+  font-size: 22px;
+  line-height: 28px;
+  letter-spacing: .3em;
+  margin-bottom: 50px
+}
+#feedback .wrapper .title p {
+  font-size: 14px;
+  line-height: 18px
+}
+#feedback .wrapper form .upperSide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 40px
+}
+#feedback .wrapper form .upperSide .formGroup {
+  width: 360px
+}
+#feedback .wrapper form .lowerSide {
+  margin-top: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center
+}
+#feedback .wrapper form .lowerSide p {
+  font: 12px/15px EuclidSquare-Light;
+  margin-left: 97px
+}
 header {
   position: fixed;
   width: 100%;
@@ -258,7 +348,7 @@ header {
   background: #fff;
   z-index: 3
 }
-header .wrapper {
+header > .container .wrapper {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -270,6 +360,9 @@ header .wrapper {
   -ms-flex-align: center;
   align-items: center;
   padding: 30px 2.9%
+}
+header .logo {
+  position: relative
 }
 header .rightSide {
   display: -webkit-box;
@@ -283,7 +376,8 @@ header .contacts {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-right: 100px
+  margin-right: 100px;
+  position: relative
 }
 header .contacts .phone {
   margin-right: 60px
@@ -291,17 +385,63 @@ header .contacts .phone {
 header .contacts .phone a {
   letter-spacing: .1em
 }
-header .menuButton button {
+header .contacts #feedbackBtn {
+  opacity: 1;
+  pointer-events: all;
+  -webkit-transition: opacity .3s;
+  -o-transition: opacity .3s;
+  transition: opacity .3s
+}
+header .contacts #feedbackBtn.active {
+  opacity: 0;
+  pointer-events: none
+}
+header #menuButton {
+  position: relative;
+  width: 101px;
+  height: 35px
+}
+header #menuButton.active .menuBtn.opened {
+  opacity: 1
+}
+header #menuButton.active .menuBtn.closed {
+  opacity: 0
+}
+header #menuButton .menuBtn {
+  position: absolute;
+  right: 0;
+  top: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center
+  align-items: center;
+  -webkit-transition: opacity .3s;
+  -o-transition: opacity .3s;
+  transition: opacity .3s
 }
-header .menuButton button p {
+header #menuButton .menuBtn.opened {
+  opacity: 0
+}
+header #menuButton .menuBtn p {
   margin-right: 16px;
   letter-spacing: .1em
+}
+header #menuButton .menuBtn .icon {
+  width: 35px;
+  height: 35px;
+  background: #fff;
+  border: 2px solid #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center
 }
 #title {
   margin-top: 123px
@@ -547,7 +687,10 @@ header .menuButton button p {
   width: 103px;
   background: #000;
   margin-top: 15px;
-  margin-left: 54px
+  margin-left: 54px;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto
 }
 #projects .titleContainer .projectsTitleSlider .item .material {
   margin-left: 54px;
