@@ -136,7 +136,7 @@ document.addEventListener('scroll', () => {
 document.addEventListener('DOMContentLoaded', () => {
 
     const currentYear = document.querySelector('.currentYear')
-    currentYear.innerHTML = new Date().getFullYear()
+    if (currentYear) { currentYear.innerHTML = new Date().getFullYear() }
 
     menuInitClose()
     menuButton.addEventListener('click', () => {

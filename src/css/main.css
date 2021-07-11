@@ -965,7 +965,7 @@ header #menuButton .menuBtn .icon {
   margin-right: 90px
 }
 #contacts .contacts .footer nav ul li a {
-  padding: 7px 0;
+  padding: 6px 0;
   position: relative
 }
 #contacts .contacts .footer nav ul li a::after {
@@ -980,4 +980,172 @@ header #menuButton .menuBtn .icon {
 #contacts .contacts .footer .copyright p {
   font-size: 14px;
   line-height: 18px
+}
+.secTitle {
+  margin-top: 200px
+}
+.secTitle .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between
+}
+.secTitle .title h1 {
+  font: 26px/33px EuclidSquare-Bold;
+  letter-spacing: .3em;
+  text-transform: uppercase
+}
+.secTitle .title .description {
+  width: 60%
+}
+.secTitle .title p:not(:last-child) {
+  margin-bottom: 50px
+}
+#materials {
+  margin-top: 85px;
+  margin-bottom: 120px
+}
+#materials .leftCol .sideTitle {
+  top: 180px!important
+}
+#materials .materials {
+  padding: 60px 0 95px;
+  position: relative
+}
+#materials .materials::before {
+  content: '';
+  background: #e2e2e2;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -300%;
+  right: 40%;
+  z-index: -1
+}
+#materials .materials .item {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-filter: drop-shadow(0 4px 20px rgba(122, 121, 121, .3));
+  filter: drop-shadow(0 4px 20px rgba(122, 121, 121, .3))
+}
+#materials .materials .item:not(:last-child) {
+  margin-bottom: 60px
+}
+#materials .materials .item .text {
+  width: 40%;
+  padding: 15px 40px 0 50px
+}
+#materials .materials .item .text .title {
+  padding: 20px 0;
+  position: relative;
+  margin-bottom: 40px
+}
+#materials .materials .item .text .title::after {
+  content: '';
+  height: 2px;
+  width: 127%;
+  background: #000;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 1
+}
+#materials .materials .item .text .title h3 {
+  font-size: 20px;
+  line-height: 25px;
+  letter-spacing: .2em;
+  padding-left: 13px
+}
+#materials .materials .item .text .features {
+  margin-bottom: 40px
+}
+#materials .materials .item .text .features ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap
+}
+#materials .materials .item .text .features ul li {
+  font-family: EuclidSquare-Medium;
+  letter-spacing: .15em;
+  text-transform: lowercase;
+  padding-right: 4px
+}
+#materials .materials .item .text .features ul li:not(:last-child)::after {
+  content: '/';
+  margin-left: 4px
+}
+#materials .materials .item .text p {
+  font-size: 14px;
+  line-height: 18px
+}
+#materials .materials .item .image {
+  width: 60%
+}
+#materials .materials .item .image .adaptHeightInner {
+  padding-top: 42%
+}
+#prefooter {
+  margin-bottom: 100px
+}
+#prefooter .items .row {
+  margin: 0 -30px
+}
+#prefooter .items .col {
+  padding: 0 30px
+}
+#prefooter .items .item .adaptHeightInner {
+  padding-top: 82%
+}
+#prefooter .items .item .image {
+  width: 100%;
+  height: 100%
+}
+#prefooter .items .item h4 {
+  font: 20px/25px EuclidSquare-Bold;
+  margin-top: 20px
+}
+footer {
+  padding: 50px 0
+}
+footer .wrapper {
+  padding: 0 8.3% 0 3.9%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center
+}
+footer .wrapper .logo {
+  opacity: .6
+}
+footer .wrapper nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex
+}
+footer .wrapper nav ul li:not(:last-child) {
+  margin-right: 90px
+}
+footer .wrapper nav ul li a {
+  position: relative;
+  padding: 6px 0
+}
+footer .wrapper nav ul li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background: #796a63
 }

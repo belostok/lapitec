@@ -250,9 +250,7 @@ body
 				align-items: center
 				p
 					font: 12px/15px $light
-					margin-left: 97px
-
-				
+					margin-left: 97px	
 
 header
 	position: fixed
@@ -690,7 +688,7 @@ header
 						&:not(:last-child)
 							margin-right: 90px
 						a
-							padding: 7px 0
+							padding: 6px 0
 							position: relative
 							&::after
 								content: ''
@@ -705,5 +703,129 @@ header
 					font-size: 14px
 					line-height: 18px
 							
+.secTitle
+	margin-top: 200px
+	.title
+		display: flex
+		justify-content: space-between
+		h1
+			font: 26px/33px $bold
+			letter-spacing: .3em
+			text-transform: uppercase
+		.description
+			width: 60%
+		p
+			&:not(:last-child)
+				margin-bottom: 50px
+				
+#materials
+	margin-top: 85px
+	margin-bottom: 120px
+	.leftCol
+		.sideTitle
+			top: 180px !important
+	.materials
+		padding: 60px 0 95px
+		position: relative
+		&::before
+			content: ''
+			background: $gray
+			position: absolute
+			top: 0
+			bottom: 0
+			left: -300%
+			right: 40%
+			z-index: -1
+		.item
+			width: 100%
+			display: flex
+			filter: drop-shadow(0px 4px 20px rgba(122, 121, 121, 0.3))
+			&:not(:last-child)
+				margin-bottom: 60px
+			.text
+				width: 40%
+				padding: 15px 40px 0 50px
+				.title
+					padding: 20px 0
+					position: relative
+					margin-bottom: 40px
+					&::after
+						content: ''
+						height: 2px
+						width: 127%
+						background: $black
+						position: absolute
+						left: 0
+						bottom: 0
+						z-index: 1
+					h3
+						font-size: 20px
+						line-height: 25px
+						letter-spacing: .2em
+						padding-left: 13px
+				.features
+					margin-bottom: 40px
+					ul
+						display: flex
+						flex-wrap: wrap
+						li
+							font-family: $medium
+							letter-spacing: .15em
+							text-transform: lowercase
+							padding-right: 4px
+							&:not(:last-child)
+								&::after
+									content: '/'
+									margin-left: 4px
+				p
+					font-size: 14px
+					line-height: 18px
+			.image
+				width: 60%
+				.adaptHeightInner
+					padding-top: 42%
 
-			
+#prefooter
+	margin-bottom: 100px
+	.items
+		.row
+			margin: 0 -30px
+		.col
+			padding: 0 30px
+		.item
+			.adaptHeightInner
+				padding-top: 82%
+			.image
+				width: 100%
+				height: 100%
+			h4
+				font: 20px/25px $bold
+				margin-top: 20px
+
+footer
+	padding: 50px 0
+	.wrapper
+		padding: 0 8.3% 0 3.9%
+		display: flex
+		justify-content: space-between
+		align-items: center
+		.logo
+			opacity: 0.6
+		nav
+			ul
+				display: flex
+				li
+					&:not(:last-child)
+						margin-right: 90px
+					a
+						position: relative
+						padding: 6px 0
+						&::after
+							content: ''
+							position: absolute
+							left: 0
+							right: 0
+							bottom: 0
+							height: 2px
+							background: #796A63
+
