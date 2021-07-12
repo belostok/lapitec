@@ -1,3 +1,6 @@
+.compensate-for-scrollbar {
+  padding-right: 0!important
+}
 section {
   position: relative
 }
@@ -987,13 +990,23 @@ header #menuButton .menuBtn .icon {
   padding-top: 200px;
   padding-bottom: 80px
 }
+.secTitle .bgImage {
+  display: none;
+  position: absolute;
+  left: 0;
+  right: 50%;
+  top: 150px;
+  bottom: 0;
+  overflow: hidden
+}
 .secTitle .title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
-  justify-content: space-between
+  justify-content: space-between;
+  position: relative
 }
 .secTitle .title h1 {
   font: 26px/33px EuclidSquare-Bold;
@@ -1269,6 +1282,197 @@ header #menuButton .menuBtn .icon {
 #aboutOffer .description .feedbackBtn {
   cursor: pointer;
   text-decoration: underline
+}
+#materialTitle {
+  padding-bottom: 110px
+}
+#materialTitle .bgImage {
+  display: block;
+  -webkit-filter: drop-shadow(0 4px 20px rgba(122, 121, 121, .3));
+  filter: drop-shadow(0 4px 20px rgba(122, 121, 121, .3))
+}
+#materialTitle .title h1 {
+  max-width: 230px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  position: relative
+}
+#materialTitle .title h1::after {
+  content: '';
+  width: 120px;
+  height: 2px;
+  background: #000;
+  position: absolute;
+  top: 16px;
+  left: calc(100% + 70px)
+}
+#materialColors {
+  margin-top: 80px
+}
+#materialColors .leftCol .sideTitle {
+  top: 85px!important
+}
+#materialColors .colors .row {
+  margin: 0 -10px
+}
+#materialColors .colors .col {
+  padding: 0 10px
+}
+#materialColors .colors .adaptHeightInner {
+  padding-top: 67%
+}
+#materialColors .colors .item {
+  margin-bottom: 50px
+}
+#materialColors .colors .item .image {
+  width: 100%;
+  height: 100%
+}
+#materialColors .colors .item h3 {
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: none;
+  margin-top: 16px
+}
+#materialFinishing {
+  margin-top: 30px
+}
+#materialFinishing .wrapper {
+  padding: 70px 0 72px;
+  position: relative
+}
+#materialFinishing .wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -200%;
+  left: 8.333333%;
+  background: #e2e2e2;
+  z-index: -1
+}
+#materialFinishing .wrapper .description {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end
+}
+#materialFinishing .wrapper .description p {
+  font-size: 14px;
+  line-height: 18px
+}
+#materialFinishing .wrapper .finishing {
+  margin-top: 70px
+}
+#materialFinishing .wrapper .finishing .row {
+  margin: 0 -10px
+}
+#materialFinishing .wrapper .finishing .col {
+  padding: 0 10px
+}
+#materialFinishing .wrapper .finishing .item {
+  text-align: center;
+  margin-bottom: 28px
+}
+#materialFinishing .wrapper .finishing .item .adaptHeightInner {
+  padding-top: 60%
+}
+#materialFinishing .wrapper .finishing .item .image {
+  width: 100%;
+  height: 100%
+}
+#materialFinishing .wrapper .finishing .item h3 {
+  font-size: 20px;
+  line-height: 25px;
+  letter-spacing: .2em;
+  margin-top: 16px
+}
+#materialProjects {
+  margin-top: 90px;
+  padding-bottom: 120px
+}
+#materialProjects .wrapper {
+  position: relative
+}
+#materialProjects .navigation {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 152px;
+  height: 76px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex
+}
+#materialProjects .navigation .next,
+#materialProjects .navigation .prev {
+  border: 2px solid #000;
+  height: 100%;
+  width: calc(100% - 1px);
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center
+}
+#materialProjects .navigation .next {
+  margin-left: -2px
+}
+#materialProjects .title {
+  margin-bottom: 70px;
+  height: 76px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center
+}
+#materialProjects .title h2 {
+  font-family: EuclidSquare-Regular;
+  letter-spacing: .2em
+}
+#materialProjects .sliderContainer {
+  width: 100%;
+  overflow: hidden
+}
+#materialProjects .sliderContainer .item {
+  border: 1px solid #000
+}
+#materialProjects .sliderContainer .item .adaptHeightInner {
+  padding-top: 70%
+}
+#materialProjects .sliderContainer .item .image {
+  width: 100%;
+  height: 100%
+}
+#materialProjects .sliderContainer .item .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 20px
+}
+#materialProjects .sliderContainer .item .text .leftSide h3 {
+  font-size: 20px;
+  line-height: 25px
+}
+#materialProjects .sliderContainer .item .text ul li {
+  font: 16px/20px EuclidSquare-Bold
+}
+#materialProjects .sliderContainer .item .text ul li:not(:last-child) {
+  margin-bottom: 4px
 }
 #prefooter {
   margin-bottom: 100px

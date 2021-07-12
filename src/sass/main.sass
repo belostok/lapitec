@@ -1,5 +1,8 @@
 @import 'variables'			
 
+.compensate-for-scrollbar
+	padding-right: 0!important
+
 section
 	position: relative
 button
@@ -705,9 +708,18 @@ header
 .secTitle
 	padding-top: 200px
 	padding-bottom: 80px
+	.bgImage
+		display: none
+		position: absolute
+		left: 0
+		right: 50%
+		top: 150px
+		bottom: 0
+		overflow: hidden
 	.title
 		display: flex
 		justify-content: space-between
+		position: relative
 		h1
 			font: 26px/33px $bold
 			letter-spacing: .3em
@@ -919,7 +931,143 @@ header
 		.feedbackBtn
 			cursor: pointer
 			text-decoration: underline
-				
+
+#materialTitle
+	padding-bottom: 110px
+	.bgImage
+		display: block
+		filter: drop-shadow(0px 4px 20px rgba(122, 121, 121, 0.3))
+	.title
+		h1
+			max-width: 230px
+			height: max-content
+			position: relative
+			&::after
+				content: ''
+				width: 120px
+				height: 2px
+				background: $black
+				position: absolute
+				top: 16px
+				left: calc(100% + 70px)
+
+#materialColors
+	margin-top: 80px
+	.leftCol
+		.sideTitle
+			top: 85px !important
+	.colors
+		.row
+			margin: 0 -10px
+		.col
+			padding: 0 10px
+		.adaptHeightInner
+			padding-top: 67%
+		.item
+			margin-bottom: 50px
+			.image
+				width: 100%
+				height: 100%
+			h3
+				font-size: 16px
+				line-height: 20px
+				text-transform: none
+				margin-top: 16px
+
+#materialFinishing
+	margin-top: 30px
+	.wrapper
+		padding: 70px 0 72px
+		position: relative
+		&::before
+			content: ''
+			position: absolute
+			top: 0
+			bottom: 0
+			right: -200%
+			left: 8.333333%
+			background: $gray
+			z-index: -1
+		.description
+			height: 100%
+			display: flex
+			align-items: flex-end
+			p
+				font-size: 14px
+				line-height: 18px
+		.finishing
+			margin-top: 70px
+			.row
+				margin: 0 -10px
+			.col
+				padding: 0 10px
+			.item
+				text-align: center
+				margin-bottom: 28px
+				.adaptHeightInner
+					padding-top: 60%
+				.image
+					width: 100%
+					height: 100%
+				h3
+					font-size: 20px
+					line-height: 25px
+					letter-spacing: .2em
+					margin-top: 16px	
+		
+#materialProjects
+	margin-top: 90px
+	padding-bottom: 120px
+	.wrapper
+		position: relative
+	.navigation
+		position: absolute
+		right: 0
+		top: 0
+		width: 152px
+		height: 76px
+		display: flex
+		.prev, .next
+			border: 2px solid $black
+			height: 100%
+			width: calc(100% - 1px)
+			cursor: pointer
+			display: flex
+			justify-content: center
+			align-items: center
+		.next
+			margin-left: -2px
+	.title
+		margin-bottom: 70px
+		height: 76px
+		display: flex
+		align-items: center
+		h2
+			font-family: $regular
+			letter-spacing: .2em	
+	.sliderContainer
+		width: 100%
+		overflow: hidden
+		.item
+			border: 1px solid $black
+			.adaptHeightInner
+				padding-top: 70%
+			.image
+				width: 100%
+				height: 100%
+			.text
+				display: flex
+				justify-content: space-between
+				padding: 20px
+				.leftSide
+					h3
+						font-size: 20px
+						line-height: 25px
+				ul
+					li
+						font: 16px/20px $bold
+						&:not(:last-child)
+							margin-bottom: 4px
 
 #prefooter
 	margin-bottom: 100px

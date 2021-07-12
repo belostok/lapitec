@@ -193,6 +193,18 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     })
 
+    const materialProjectsSlider = new Swiper('.materialProjectsSlider', {
+        speed: 500,
+        spaceBetween: 10,
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+        loop: true,
+        navigation: {
+            nextEl: '#materialProjects .next',
+            prevEl: '#materialProjects .prev'
+        }
+    })
+
     const callbackForm = document.getElementById('callbackForm')
     callbackForm.addEventListener('submit', formSend)
 

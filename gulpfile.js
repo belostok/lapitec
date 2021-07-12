@@ -12,7 +12,8 @@ const del          = require('del');
 
 function scripts() {
 	return src([
-		'node_modules/swiper/swiper-bundle.min.js'
+		'./node_modules/swiper/swiper-bundle.min.js',
+		'./node_modules/@fancyapps/ui/dist/fancybox.umd.js'
 	])
 	.pipe(concat('libs.min.js'))
 	.pipe(uglify())
