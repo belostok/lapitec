@@ -278,6 +278,52 @@ body
 					font: 12px/15px $light
 					margin-left: 97px	
 
+.underline
+	position: relative
+	padding: 6px 0
+	width: max-content
+	&::after
+		content: ''
+		position: absolute
+		left: 0
+		right: 0
+		bottom: 0
+		height: 2px
+		background: #796A63
+
+.secTitle
+	padding-top: 200px
+	padding-bottom: 80px
+	.bgImage
+		display: none
+		position: absolute
+		left: 0
+		right: 50%
+		top: 150px
+		bottom: 0
+		overflow: hidden
+	.title
+		display: flex
+		justify-content: space-between
+		position: relative
+		h1
+			font: 26px/33px $bold
+			letter-spacing: .3em
+			text-transform: uppercase
+		.description
+			width: 60%
+			h2
+				font: 20px/25px $regular
+				letter-spacing: .1em
+				margin-bottom: 40px
+			p
+				&:not(:last-child)
+					margin-bottom: 50px
+			a
+				margin-top: 44px
+
+
+
 header
 	position: fixed
 	width: 100%
@@ -704,31 +750,6 @@ header
 				p
 					font-size: 14px
 					line-height: 18px
-							
-.secTitle
-	padding-top: 200px
-	padding-bottom: 80px
-	.bgImage
-		display: none
-		position: absolute
-		left: 0
-		right: 50%
-		top: 150px
-		bottom: 0
-		overflow: hidden
-	.title
-		display: flex
-		justify-content: space-between
-		position: relative
-		h1
-			font: 26px/33px $bold
-			letter-spacing: .3em
-			text-transform: uppercase
-		.description
-			width: 60%
-		p
-			&:not(:last-child)
-				margin-bottom: 50px
 				
 #materials
 	margin-bottom: 120px
@@ -1068,6 +1089,57 @@ header
 						font: 16px/20px $bold
 						&:not(:last-child)
 							margin-bottom: 4px
+
+#useTitle
+	padding-bottom: 50px
+
+#usePage
+	margin-bottom: 120px
+	.leftCol
+		.sideTitle
+			top: 100px !important
+	.usePage
+		padding: 80px 0 10px 9.5%
+		position: relative
+		&::before
+			content: ''
+			position: absolute
+			left: 0
+			top: 0
+			bottom: 0
+			right: -300%
+			background: $gray
+			z-index: -1
+		.title
+			h2
+				letter-spacing: .1em
+			p
+				margin-top: 40px
+				font-size: 14px
+				line-height: 18px
+		.items
+			margin-top: 95px
+			.row
+				margin: 0 -60px
+			.col
+				padding: 0 60px
+			.item
+				display: flex
+				flex-direction: column
+				justify-content: center
+				margin-bottom: 90px
+				text-align: center
+				.icon
+					width: 100px
+					height: 100px
+					margin: 0 auto
+				h3
+					font-size: 18px
+					line-height: 23px
+					letter-spacing: .15em
+					max-width: 200px
+					margin: 35px auto 0
+
 
 #prefooter
 	margin-bottom: 100px

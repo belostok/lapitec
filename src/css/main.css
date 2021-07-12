@@ -375,6 +375,63 @@ body {
   font: 12px/15px EuclidSquare-Light;
   margin-left: 97px
 }
+.underline {
+  position: relative;
+  padding: 6px 0;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content
+}
+.underline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background: #796a63
+}
+.secTitle {
+  padding-top: 200px;
+  padding-bottom: 80px
+}
+.secTitle .bgImage {
+  display: none;
+  position: absolute;
+  left: 0;
+  right: 50%;
+  top: 150px;
+  bottom: 0;
+  overflow: hidden
+}
+.secTitle .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  position: relative
+}
+.secTitle .title h1 {
+  font: 26px/33px EuclidSquare-Bold;
+  letter-spacing: .3em;
+  text-transform: uppercase
+}
+.secTitle .title .description {
+  width: 60%
+}
+.secTitle .title .description h2 {
+  font: 20px/25px EuclidSquare-Regular;
+  letter-spacing: .1em;
+  margin-bottom: 40px
+}
+.secTitle .title .description p:not(:last-child) {
+  margin-bottom: 50px
+}
+.secTitle .title .description a {
+  margin-top: 44px
+}
 header {
   position: fixed;
   width: 100%;
@@ -986,39 +1043,6 @@ header #menuButton .menuBtn .icon {
   font-size: 14px;
   line-height: 18px
 }
-.secTitle {
-  padding-top: 200px;
-  padding-bottom: 80px
-}
-.secTitle .bgImage {
-  display: none;
-  position: absolute;
-  left: 0;
-  right: 50%;
-  top: 150px;
-  bottom: 0;
-  overflow: hidden
-}
-.secTitle .title {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  position: relative
-}
-.secTitle .title h1 {
-  font: 26px/33px EuclidSquare-Bold;
-  letter-spacing: .3em;
-  text-transform: uppercase
-}
-.secTitle .title .description {
-  width: 60%
-}
-.secTitle .title p:not(:last-child) {
-  margin-bottom: 50px
-}
 #materials {
   margin-bottom: 120px
 }
@@ -1473,6 +1497,72 @@ header #menuButton .menuBtn .icon {
 }
 #materialProjects .sliderContainer .item .text ul li:not(:last-child) {
   margin-bottom: 4px
+}
+#useTitle {
+  padding-bottom: 50px
+}
+#usePage {
+  margin-bottom: 120px
+}
+#usePage .leftCol .sideTitle {
+  top: 100px!important
+}
+#usePage .usePage {
+  padding: 80px 0 10px 9.5%;
+  position: relative
+}
+#usePage .usePage::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: -300%;
+  background: #e2e2e2;
+  z-index: -1
+}
+#usePage .usePage .title h2 {
+  letter-spacing: .1em
+}
+#usePage .usePage .title p {
+  margin-top: 40px;
+  font-size: 14px;
+  line-height: 18px
+}
+#usePage .usePage .items {
+  margin-top: 95px
+}
+#usePage .usePage .items .row {
+  margin: 0 -60px
+}
+#usePage .usePage .items .col {
+  padding: 0 60px
+}
+#usePage .usePage .items .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-bottom: 90px;
+  text-align: center
+}
+#usePage .usePage .items .item .icon {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto
+}
+#usePage .usePage .items .item h3 {
+  font-size: 18px;
+  line-height: 23px;
+  letter-spacing: .15em;
+  max-width: 200px;
+  margin: 35px auto 0
 }
 #prefooter {
   margin-bottom: 100px
