@@ -2,7 +2,8 @@ const log = console.log
 const isMobile = window.matchMedia('(max-width: 768px)').matches
 
 const feedback = document.getElementById('feedback')
-const feedbackBtn = document.getElementById('feedbackBtn')
+const headerFeedbackBtn = document.getElementById('feedbackBtn')
+const feedbackBtn = document.querySelectorAll('.feedbackBtn')
 const menu = document.getElementById('menu')
 const menuButton = document.getElementById('menuButton')
 
@@ -56,7 +57,7 @@ const menuInitClose = () => {
     menu.style.top = `-${menuHeight}px`
     feedback.style.top = `-${feedbackHeight}px`
     feedback.classList.remove('active')
-    feedbackBtn.classList.remove('active')
+    Array.from(feedbackBtn).forEach(e => e.classList.remove('active'))
 }
 const menuOpen = m => m.style.top = 0
 
@@ -151,15 +152,17 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }) 
 
-    feedbackBtn.addEventListener('click', () => {
-        if (!feedback.classList.contains('active')) {
-            menu.classList.contains('active') && menu.classList.remove('active')
-            menuOpen(feedback)
-            menuButton.classList.add('active')
-        }
-        classActive(feedbackBtn, feedback)
+    Array.from(feedbackBtn).forEach(e => {
+        e.addEventListener('click', () => {
+            if (!feedback.classList.contains('active')) {
+                menu.classList.contains('active') && menu.classList.remove('active')
+                menuOpen(feedback)
+                menuButton.classList.add('active')
+                classActive(headerFeedbackBtn, feedback)
+            }
+            
+        })
     })
-
    
     const projectsTitleSlider = new Swiper('.projectsTitleSlider', {
         speed: 500,

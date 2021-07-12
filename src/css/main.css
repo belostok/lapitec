@@ -109,6 +109,13 @@ textarea {
   padding: 10px 40px;
   color: #fff
 }
+.button:hover {
+  color: #fff
+}
+.button.white {
+  background: #fff;
+  color: #000
+}
 #sandwich {
   display: none;
   width: 29px;
@@ -244,6 +251,32 @@ textarea {
   background: #000;
   margin-left: 40px
 }
+.showreelButton {
+  width: 307px;
+  height: 89px;
+  border: 1px solid rgba(255,255,255,.3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-top: 215px
+}
+.showreelButton p {
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  color: #fff;
+  margin-right: 53px
+}
+.showreelButton p strong {
+  display: block
+}
 body,
 html {
   max-width: 100%;
@@ -345,8 +378,14 @@ header {
   left: 0;
   right: 0;
   top: 0;
-  background: #fff;
-  z-index: 3
+  z-index: 3;
+  background: 0 0;
+  -webkit-transition: background .3s;
+  -o-transition: background .3s;
+  transition: background .3s
+}
+header.active {
+  background: #fff
 }
 header > .container .wrapper {
   width: 100%;
@@ -498,17 +537,6 @@ header #menuButton .menuBtn .icon {
   -ms-flex-align: center;
   align-items: center
 }
-#title .contentCol .wrapper::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  background-image: url(../img/title-bg.jpg);
-  background-repeat: no-repeat;
-  background-size: cover
-}
 #title .contentCol .wrapper .title {
   position: relative;
   color: #fff;
@@ -527,32 +555,6 @@ header #menuButton .menuBtn .icon {
 }
 #title .contentCol .wrapper .title > p strong {
   font-size: 28px;
-  display: block
-}
-#title .contentCol .wrapper .title .titleButton {
-  width: 307px;
-  height: 89px;
-  border: 1px solid rgba(255,255,255,.3);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  margin-top: 215px
-}
-#title .contentCol .wrapper .title .titleButton p {
-  font-size: 14px;
-  line-height: 150%;
-  letter-spacing: .3em;
-  text-transform: uppercase;
-  color: #fff;
-  margin-right: 53px
-}
-#title .contentCol .wrapper .title .titleButton p strong {
   display: block
 }
 #advantages {
@@ -982,7 +984,8 @@ header #menuButton .menuBtn .icon {
   line-height: 18px
 }
 .secTitle {
-  margin-top: 200px
+  padding-top: 200px;
+  padding-bottom: 80px
 }
 .secTitle .title {
   display: -webkit-box;
@@ -1004,7 +1007,6 @@ header #menuButton .menuBtn .icon {
   margin-bottom: 50px
 }
 #materials {
-  margin-top: 85px;
   margin-bottom: 120px
 }
 #materials .leftCol .sideTitle {
@@ -1089,6 +1091,184 @@ header #menuButton .menuBtn .icon {
 }
 #materials .materials .item .image .adaptHeightInner {
   padding-top: 42%
+}
+#aboutTitle::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: -300px;
+  background-image: url(../img/menu-bg.svg)
+}
+#about .adaptHeightInner {
+  padding-top: 53%
+}
+#about .about .showreelButton {
+  margin-top: 0;
+  position: absolute;
+  bottom: 100px;
+  left: 100px
+}
+#aboutFeatures {
+  margin-top: 100px
+}
+#aboutFeatures .adaptHeightInner {
+  padding-bottom: 166%
+}
+#aboutFeatures .imageContainer {
+  position: relative;
+  min-height: 795px;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center
+}
+#aboutFeatures .imageContainer .text {
+  max-width: 240px;
+  position: relative;
+  text-align: center;
+  color: #fff
+}
+#aboutFeatures .imageContainer .text h4 {
+  font: 20px/24px EuclidSquare-Bold;
+  letter-spacing: .2em;
+  text-transform: uppercase
+}
+#aboutFeatures .imageContainer .text p {
+  margin-top: 70px;
+  font-size: 14px;
+  line-height: 18px
+}
+#aboutFeatures .imageContainer .text button {
+  margin-top: 90px
+}
+#aboutFeatures .aboutFeatures h2 {
+  letter-spacing: .2em
+}
+#aboutFeatures .aboutFeatures .features {
+  margin-top: 80px
+}
+#aboutFeatures .aboutFeatures .features .row {
+  margin: 0 -40px
+}
+#aboutFeatures .aboutFeatures .features .col {
+  padding: 0 40px
+}
+#aboutFeatures .aboutFeatures .features .item {
+  margin-bottom: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex
+}
+#aboutFeatures .aboutFeatures .features .item .icon {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  width: 40px;
+  height: 40px;
+  margin-right: 35px
+}
+#aboutFeatures .aboutFeatures .features .item .text h3 {
+  font-size: 18px;
+  line-height: 23px
+}
+#aboutFeatures .aboutFeatures .features .item .text p {
+  margin-top: 20px;
+  font-size: 14px;
+  line-height: 18px
+}
+#aboutFormat {
+  margin-top: 100px
+}
+#aboutFormat .titleContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between
+}
+#aboutFormat .titleContainer .title {
+  padding-right: 40px
+}
+#aboutFormat .titleContainer .title h2 {
+  letter-spacing: .2em
+}
+#aboutFormat .titleContainer .description {
+  width: 60%
+}
+#aboutFormat .aboutTable {
+  width: 100%;
+  border: 1px solid #796a63;
+  margin-top: 50px
+}
+#aboutFormat .aboutTable .col:not(:last-child) .item {
+  border-right: 1px solid #796a63
+}
+#aboutFormat .aboutTable .item {
+  height: 100%;
+  padding: 11%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex
+}
+#aboutFormat .aboutTable .item .icon {
+  width: 43px;
+  height: 30px;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  margin-right: 8%
+}
+#aboutFormat .aboutTable .item .text h4 {
+  font: 16px/20px EuclidSquare-Bold;
+  margin-bottom: 20px
+}
+#aboutFormat .aboutTable .item .text p {
+  font-size: 14px;
+  line-height: 18px
+}
+#aboutFormat .buttonContainer {
+  margin-top: 60px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center
+}
+#aboutOffer {
+  margin-top: 75px;
+  padding: 80px 0 110px
+}
+#aboutOffer::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-image: url(../img/about-offer-bg.png);
+  z-index: -1
+}
+#aboutOffer .title {
+  margin-bottom: 65px
+}
+#aboutOffer .description p:not(:last-child) {
+  margin-bottom: 20px
+}
+#aboutOffer .description .feedbackBtn {
+  cursor: pointer;
+  text-decoration: underline
 }
 #prefooter {
   margin-bottom: 100px

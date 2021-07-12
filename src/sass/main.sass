@@ -84,6 +84,11 @@ textarea
 	background: $black
 	padding: 10px 40px
 	color: $white
+	&:hover
+		color: $white
+	&.white
+		background: $white
+		color: $black
 
 #sandwich
 	display: none
@@ -176,6 +181,24 @@ textarea
 			background: $black
 			margin-left: 40px
 
+.showreelButton
+	width: 307px
+	height: 89px
+	border: 1px solid rgba(255,255,255,.3)
+	display: flex
+	align-items: center
+	justify-content: center
+	margin-top: 215px
+	p
+		font-size: 14px
+		line-height: 150%
+		letter-spacing: .3em
+		text-transform: uppercase
+		color: $white
+		margin-right: 53px
+		strong
+			display: block
+
 body, html
 	max-width: 100%
 	overflow-x: hidden
@@ -258,8 +281,11 @@ header
 	left: 0
 	right: 0
 	top: 0
-	background: $white
 	z-index: 3
+	background: transparent
+	transition: background .3s
+	&.active
+		background: $white
 	& > .container
 		.wrapper
 			width: 100%
@@ -356,16 +382,6 @@ header
 			position: relative
 			display: flex
 			align-items: center
-			&::before
-				content: ''
-				position: absolute
-				left: 0
-				right: 0
-				top: 0
-				bottom: 0
-				background-image: url(../img/title-bg.jpg)
-				background-repeat: no-repeat
-				background-size: cover
 			.title
 				position: relative
 				color: $white
@@ -382,23 +398,6 @@ header
 					strong
 						font-size: 28px
 						display: block
-				.titleButton
-					width: 307px
-					height: 89px
-					border: 1px solid rgba(255,255,255,.3)
-					display: flex
-					align-items: center
-					justify-content: center
-					margin-top: 215px
-					p
-						font-size: 14px
-						line-height: 150%
-						letter-spacing: .3em
-						text-transform: uppercase
-						color: $white
-						margin-right: 53px
-						strong
-							display: block
 
 #advantages
 	margin-top: 110px
@@ -704,7 +703,8 @@ header
 					line-height: 18px
 							
 .secTitle
-	margin-top: 200px
+	padding-top: 200px
+	padding-bottom: 80px
 	.title
 		display: flex
 		justify-content: space-between
@@ -719,7 +719,6 @@ header
 				margin-bottom: 50px
 				
 #materials
-	margin-top: 85px
 	margin-bottom: 120px
 	.leftCol
 		.sideTitle
@@ -784,6 +783,143 @@ header
 				width: 60%
 				.adaptHeightInner
 					padding-top: 42%
+
+#aboutTitle
+	&::before
+		content: ''
+		position: absolute
+		left: 0
+		right: 0
+		top: 0
+		bottom: -300px
+		background-image: url(../img/menu-bg.svg)
+
+#about
+	.adaptHeightInner
+		padding-top: 53%
+	.about
+		.showreelButton
+			margin-top: 0
+			position: absolute
+			bottom: 100px
+			left: 100px
+
+#aboutFeatures
+	margin-top: 100px
+	.adaptHeightInner
+		padding-bottom: 166%
+	.imageContainer
+		position: relative
+		min-height: 795px
+		height: 100%
+		width: 100%
+		display: flex
+		align-items: center
+		justify-content: center
+		.text
+			max-width: 240px
+			position: relative
+			text-align: center
+			color: $white
+			h4
+				font: 20px/24px $bold
+				letter-spacing: .2em
+				text-transform: uppercase
+			p
+				margin-top: 70px
+				font-size: 14px
+				line-height: 18px
+			button
+				margin-top: 90px
+	.aboutFeatures
+		h2
+			letter-spacing: .2em
+		.features
+			margin-top: 80px
+			.row
+				margin: 0 -40px
+			.col
+				padding: 0 40px
+			.item
+				margin-bottom: 80px
+				display: flex
+				.icon
+					flex: 0 0 auto
+					width: 40px
+					height: 40px
+					margin-right: 35px
+				.text
+					h3
+						font-size: 18px
+						line-height: 23px
+					p
+						margin-top: 20px
+						font-size: 14px
+						line-height: 18px
+
+#aboutFormat
+	margin-top: 100px
+	.titleContainer
+		display: flex
+		justify-content: space-between
+		.title
+			padding-right: 40px
+			h2
+				letter-spacing: .2em
+		.description
+			width: 60%
+	.aboutTable
+		width: 100%
+		border: 1px solid #796A63
+		margin-top: 50px
+		.col
+			&:not(:last-child)
+				.item
+					border-right: 1px solid #796A63
+		.item
+			height: 100%
+			padding: 11%
+			display: flex
+			.icon
+				width: 43px
+				height: 30px
+				flex: 0 0 auto
+				margin-right: 8%
+			.text
+				h4
+					font: 16px/20px $bold
+					margin-bottom: 20px
+				p
+					font-size: 14px
+					line-height: 18px
+	.buttonContainer
+		margin-top: 60px
+		width: 100%
+		display: flex
+		justify-content: center
+
+#aboutOffer
+	margin-top: 75px
+	padding: 80px 0 110px
+	&::before
+		content: ''
+		position: absolute
+		left: 0
+		right: 0
+		top: 0
+		bottom: 0
+		background-image: url(../img/about-offer-bg.png)
+		z-index: -1
+	.title
+		margin-bottom: 65px
+	.description
+		p
+			&:not(:last-child)
+				margin-bottom: 20px
+		.feedbackBtn
+			cursor: pointer
+			text-decoration: underline
+				
 
 #prefooter
 	margin-bottom: 100px
