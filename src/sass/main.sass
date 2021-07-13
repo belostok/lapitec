@@ -1166,6 +1166,52 @@ header
 					height: 120px
 					padding: 15px 35px
 
+#warrantyTitle
+	padding-bottom: 105px
+	.title
+		.description
+			p
+				max-width: 600px
+
+#warranty
+	margin-bottom: 100px
+	.warranty
+		padding: 40px 0 100px 10%
+		position: relative
+		&::before
+			content: ''
+			position: absolute
+			left: 0
+			right: -200%
+			top: 0
+			bottom: 0
+			background: $gray
+			z-index: -1
+		h3
+			font-size: 20px
+			line-height: 25px
+			letter-spacing: .1em
+			margin-top: 60px
+		p
+			margin-top: 30px
+		ul
+			li
+				margin-top: 30px
+		& > ul
+			& > li
+				position: relative
+				padding-left: 120px
+				&::before
+					content: ''
+					width: 80px
+					height: 1px
+					background: $black
+					position: absolute
+					left: 0
+					top: 9px
+
+
+
 #prefooter
 	margin-bottom: 100px
 	.items

@@ -1595,6 +1595,54 @@ header #menuButton .menuBtn .icon {
   height: 120px;
   padding: 15px 35px
 }
+#warrantyTitle {
+  padding-bottom: 105px
+}
+#warrantyTitle .title .description p {
+  max-width: 600px
+}
+#warranty {
+  margin-bottom: 100px
+}
+#warranty .warranty {
+  padding: 40px 0 100px 10%;
+  position: relative
+}
+#warranty .warranty::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: -200%;
+  top: 0;
+  bottom: 0;
+  background: #e2e2e2;
+  z-index: -1
+}
+#warranty .warranty h3 {
+  font-size: 20px;
+  line-height: 25px;
+  letter-spacing: .1em;
+  margin-top: 60px
+}
+#warranty .warranty p {
+  margin-top: 30px
+}
+#warranty .warranty ul li {
+  margin-top: 30px
+}
+#warranty .warranty > ul > li {
+  position: relative;
+  padding-left: 120px
+}
+#warranty .warranty > ul > li::before {
+  content: '';
+  width: 80px;
+  height: 1px;
+  background: #000;
+  position: absolute;
+  left: 0;
+  top: 9px
+}
 #prefooter {
   margin-bottom: 100px
 }
