@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', () => {
     menuInitClose()
     menuButton.addEventListener('click', () => {
         if (menuButton.classList.contains('active')) {
-            menuInitClose() 
+            menuInitClose()
             menu.classList.remove('active')
             menuButton.classList.remove('active')
         } else {
@@ -150,7 +150,7 @@ document.addEventListener('DOMContentLoaded', () => {
             menu.classList.add('active')
             menuButton.classList.add('active')
         }
-    }) 
+    })
 
     Array.from(feedbackBtn).forEach(e => {
         e.addEventListener('click', () => {
@@ -160,10 +160,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 menuButton.classList.add('active')
                 classActive(headerFeedbackBtn, feedback)
             }
-            
+
         })
     })
-   
+
     const projectsTitleSlider = new Swiper('.projectsTitleSlider', {
         speed: 500,
         spaceBetween: 20,
@@ -216,6 +216,22 @@ document.onreadystatechange = () => {
         sideTitlesInit()
     }
 }
+
+
+DG.then(() => {
+    let map
+    const mapIcon = DG.icon({
+        iconUrl: '../img/marker.png',
+        iconSize: [33, 34]
+    })
+    map = DG.map('map', {
+        center: [55.753466, 37.62017],
+        zoom: 10
+    })
+    DG.marker([55.749874, 37.53774], { icon: mapIcon }).addTo(map)
+    DG.marker([55.962681, 37.509696], { icon: mapIcon }).addTo(map)
+})
+
 
 
 

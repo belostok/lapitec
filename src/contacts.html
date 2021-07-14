@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lapitec</title>
+    <meta name="description" content="">
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/libs.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/media.css">
+
+    <script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
+
+</head>
+
+<body>
+    <header>
+        <div id="menu" class="topMenu">
+            <div class="container">
+                <div class="wrapper">
+                    <div class="row">
+                        <div class="col d-none d-md-block col-md-1">
+                            <div class="leftCol">
+                                <div class="sideTitle menuSideTitle">
+                                    <p>menu</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-12 col-md-9 offset-md-1">
+                            <div class="upperSide">
+                                <nav>
+                                    <ul>
+                                        <li><a href="about.html">о компании LAPITEC®</a></li>
+                                        <li><a href="projects.html">Проекты</a></li>
+                                        <li><a href="use.html">применения</a></li>
+                                        <li><a href="materials.html">Материалы</a></li>
+                                        <li><a href="academy.html">академия lapitec®</a></li>
+                                        <li><a href="contacts.html">контакты</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-end">
+                        <div class="col col-12 col-md-10">
+                            <div class="lowerSide">
+                                <nav>
+                                    <ul>
+                                        <li><a href="warranty.html">Гарантия</a></li>
+                                        <li><a href="faq.html">FAQ</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="feedback" class="topMenu" style="top: 0">
+            <div class="container">
+                <div class="wrapper">
+                    <div class="row">
+                        <div class="col d-none d-md-block col-md-1">
+                            <div class="leftCol">
+                                <div class="sideTitle menuSideTitle">
+                                    <p>contact us</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-12 col-md-7 offset-md-1">
+                            <div class="title">
+                                <h3>напишите нам</h3>
+                                <p>Материалы <strong>Lapitec®</strong> основаны на самых последних тенденциях в дизайне
+                                    и производятся с использованием собственных, передовых технологий.</p>
+                            </div>
+                            <form id="callbackForm">
+                                <div class="upperSide">
+                                    <div class="formGroup">
+                                        <input type="text" name="name" placeholder="Имя" class="_req _name">
+                                    </div>
+                                    <div class="formGroup">
+                                        <input type="email" name="email" placeholder="Email" class="_req _email">
+                                    </div>
+                                </div>
+                                <div class="formGroup">
+                                    <textarea name="message" placeholder="Сообщение"></textarea>
+                                </div>
+                                <div class="lowerSide">
+                                    <button class="button">Отправить</button>
+                                    <p>Нажимая кнопку «Отправить» вы принимаете <a href="#" target="_blank">Соглашение
+                                            об обработке персональных данных</a></p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="wrapper">
+                <a href="/" class="logo">
+                    <img src="img/logo.svg" alt="">
+                </a>
+                <div class="rightSide">
+                    <div class="contacts">
+                        <div class="phone">
+                            <a href="tel:+74956418138">tel:+74956418138</a>
+                        </div>
+                        <button id="feedbackBtn" class="button feedbackBtn">Связаться с нами</button>
+                    </div>
+                    <button id="menuButton">
+                        <div class="menuBtn closed">
+                            <p>menu</p>
+                            <svg width="36" height="35" viewBox="0 0 36 35" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16.7075 0H0.993896V15.7136H16.7075V0Z" fill="black" />
+                                <path d="M16.7075 19.2864H0.993896V35H16.7075V19.2864Z" fill="black" />
+                                <path d="M36.0005 0H20.2869V15.7136H36.0005V0Z" fill="black" />
+                                <path d="M36.0005 19.2864H20.2869V35H36.0005V19.2864Z" fill="black" />
+                            </svg>
+                        </div>
+                        <div class="menuBtn opened">
+                            <p>close</p>
+                            <div class="icon">
+                                <svg width="43" height="43" viewBox="0 0 43 43" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <line x1="10.7071" y1="10.5061" x2="31.9203" y2="31.7193" stroke="black"
+                                        stroke-width="2" />
+                                    <line x1="10.2929" y1="31.5061" x2="31.5061" y2="10.2929" stroke="black"
+                                        stroke-width="2" />
+                                </svg>
+                            </div>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section id="contactsPage">
+        <div class="container">
+            <div class="row">
+                <div class="col col-11 offset-1 col-md-10">
+                    <div class="title">
+                        <h1>контакты</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col d-none d-md-block col-md-1">
+                    <div class="leftCol">
+                        <div class="sideTitle">
+                            <p>contacts</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-11 offset-1 col-md-4 offset-md-0">
+                    <div class="text">
+                        <div class="item">
+                            <h3>офис</h3>
+                            <p><strong>adress:</strong> г. Москва, Пресненская наб. 12, 23 этаж, офис 8 (Варварка)</p>
+                            <a href="tel:+74956418138"><strong>tel:</strong> +74956418138</a>
+                            <a href="mailto:info@lapitec.ru"><strong>mail:</strong> info@lapitec.ru</a>
+                        </div>
+                        <div class="item">
+                            <h3>склад</h3>
+                            <p><strong>adress:</strong> г. Долгопрудный, ул. Якова Гунина 1</p>
+                            <a href="tel:+74956418138"><strong>tel:</strong> +74956418138</a>
+                        </div>
+                        <div class="social">
+                            <a href="#">
+                                <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="15" width="15" height="15" transform="rotate(90 15 0)" fill="black" />
+                                </svg>
+                                facebook
+                            </a>
+                            <a href="#">
+                                <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="15" width="15" height="15" transform="rotate(90 15 0)" fill="black" />
+                                </svg>
+                                instagram
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-11 offset-1 col-md-7 offset-md-0">
+                    <div class="adaptHeightInner">
+                        <div class="adaptHeightContent">
+                            <div id="map"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="wrapper">
+                <a href="/" class="logo">
+                    <img src="./img/logo-footer.svg" alt="">
+                </a>
+                <nav>
+                    <ul>
+                        <li><a href="academy.html">Академия Lapitec</a></li>
+                        <li><a href="warranty.html">Гарантия</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="js/libs.min.js"></script>
+<script src="js/common.js"></script>
+
+</html>

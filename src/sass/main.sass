@@ -1210,7 +1210,45 @@ header
 					left: 0
 					top: 9px
 
-
+#contactsPage
+	margin-top: 205px
+	.title
+		margin-bottom: 120px
+		h1
+			font: 26px/33px $bold
+			letter-spacing: .3em
+			text-transform: uppercase
+	.text
+		.item
+			max-width: 380px
+			&:not(:last-child)
+				margin-bottom: 80px
+			h3
+				font-size: 18px
+				line-height: 23px
+				letter-spacing: .05em
+				margin-bottom: 40px
+			strong
+				font-family: $semibold
+			p, a
+				&:not(:last-child)
+					margin-bottom: 25px
+		.social
+			display: flex
+			a
+				display: flex
+				align-items: center
+				&:not(:last-child)
+					margin-right: 115px
+				svg
+					margin-right: 15px
+					flex: 0 0 auto
+	.adaptHeightInner
+		padding-top: 75.5%
+		#map
+			height: 100%
+			width: 100%
+										
 
 #prefooter
 	margin-bottom: 100px

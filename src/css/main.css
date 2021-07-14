@@ -1643,6 +1643,65 @@ header #menuButton .menuBtn .icon {
   left: 0;
   top: 9px
 }
+#contactsPage {
+  margin-top: 205px
+}
+#contactsPage .title {
+  margin-bottom: 120px
+}
+#contactsPage .title h1 {
+  font: 26px/33px EuclidSquare-Bold;
+  letter-spacing: .3em;
+  text-transform: uppercase
+}
+#contactsPage .text .item {
+  max-width: 380px
+}
+#contactsPage .text .item:not(:last-child) {
+  margin-bottom: 80px
+}
+#contactsPage .text .item h3 {
+  font-size: 18px;
+  line-height: 23px;
+  letter-spacing: .05em;
+  margin-bottom: 40px
+}
+#contactsPage .text .item strong {
+  font-family: EuclidSquare-SemiBold
+}
+#contactsPage .text .item a:not(:last-child),
+#contactsPage .text .item p:not(:last-child) {
+  margin-bottom: 25px
+}
+#contactsPage .text .social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex
+}
+#contactsPage .text .social a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center
+}
+#contactsPage .text .social a:not(:last-child) {
+  margin-right: 115px
+}
+#contactsPage .text .social a svg {
+  margin-right: 15px;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto
+}
+#contactsPage .adaptHeightInner {
+  padding-top: 75.5%
+}
+#contactsPage .adaptHeightInner #map {
+  height: 100%;
+  width: 100%
+}
 #prefooter {
   margin-bottom: 100px
 }
