@@ -105,6 +105,25 @@ textarea {
   resize: none;
   height: 40px
 }
+select {
+  border: 1px solid #000;
+  width: 100%;
+  height: 50px;
+  font: 14px/18px EuclidSquare-Regular;
+  padding-left: 13%;
+  padding-right: 25%;
+  outline: 0;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowap;
+  overflow: hidden;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url(../img/select.svg);
+  background-repeat: no-repeat;
+  background-position: 90% center
+}
 .button {
   font-size: 12px;
   line-height: 15px;
@@ -2020,6 +2039,78 @@ header #menuButton .menuBtn .icon {
   display: block;
   width: 100%;
   height: 40px
+}
+#projectsTitle {
+  padding-bottom: 90px
+}
+#projectsTitle .title .description .filter {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-top: -10px
+}
+#projectsTitle .title .description .filter .item {
+  width: calc(25% - 15px)
+}
+#projectsTitle .title .description .filter .item button {
+  width: 100%;
+  height: 100%;
+  background: #000;
+  color: #fff;
+  font: 14px/18px EuclidSquare-Regular
+}
+#projectsPage {
+  padding-bottom: 30px
+}
+#projectsPage .leftCol .sideTitle {
+  top: 150px!important
+}
+#projectsPage .projects .row {
+  margin: 0 -5px
+}
+#projectsPage .projects .col {
+  padding: 0 5px
+}
+#projectsPage .projects .adaptHeightInner {
+  padding-top: 73%
+}
+#projectsPage .projects .item {
+  border: 1px solid #000;
+  margin-bottom: 50px
+}
+#projectsPage .projects .item .image {
+  width: 100%;
+  height: 100%
+}
+#projectsPage .projects .item .text {
+  padding: 20px
+}
+#projectsPage .projects .item .text .upperSide {
+  width: 100%
+}
+#projectsPage .projects .item .text .upperSide h3 {
+  font-size: 20px;
+  line-height: 25px
+}
+#projectsPage .projects .item .text .lowerSide {
+  width: 100%;
+  margin-top: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end
+}
+#projectsPage .projects .item .text .lowerSide ul li {
+  font-family: EuclidSquare-Bold
+}
+#projectsPage .projects .item .text .lowerSide ul li:not(:last-child) {
+  margin-bottom: 4px
 }
 #prefooter {
   margin-bottom: 100px
