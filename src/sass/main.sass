@@ -1248,7 +1248,250 @@ header
 		#map
 			height: 100%
 			width: 100%
-										
+
+#academyTitle
+	padding-bottom: 100px
+	.title
+		h1
+			max-width: 360px	
+
+#academy
+	margin-bottom: 60px
+	.academy
+		padding: 100px 0 100px 10%
+		position: relative
+		&::before
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			bottom: 0
+			right: -300%
+			background: $gray
+			z-index: -1
+		& > .item
+			border-bottom: 1px solid rgba(0,0,0,.5)
+			&:first-child
+				border-top: 1px solid rgba(0,0,0,.5)
+			&.active
+				.title
+					.close
+						.opened
+							opacity: 1
+						.closed
+							opacity: 0
+			&.video
+				.title
+					.leftSide
+						.icon
+							.doc
+								opacity: 0
+							.video
+								opacity: 1
+				.content
+					.row
+						margin: 0 -5px
+					.col
+						padding: 0 5px
+					.adaptHeightInner
+						padding-top: 57%
+					.item
+						width: 100%
+						cursor: pointer
+						text-align: center
+						margin-bottom: 40px
+						.image
+							width: 100%
+							height: 100%
+							position: relative
+							background: $black
+							.play
+								margin: auto
+								width: max-content
+								height: max-content
+						h3
+							font: 14px/18px $regular
+							margin-top: 15px
+			&.doc
+				.title
+					.leftSide
+						.icon
+							.doc
+								opacity: 1
+							.video
+								opacity: 0
+				.content
+					padding-left: 7%
+					padding-right: 12%
+					.item
+						margin-bottom: 40px
+						display: flex
+						justify-content: space-between
+						align-items: center
+						&.pdf
+							.leftSide
+								.icon
+									.pdf
+										opacity: 1
+						&.zip
+							.leftSide
+								.icon
+									.zip
+										opacity: 1
+						.leftSide
+							display: flex
+							align-items: center
+							max-width: 80%
+							.icon
+								width: 18px
+								height: 25px
+								position: relative
+								flex: 0 0 auto
+								margin-right: 30px
+								.fIcon
+									opacity: 0
+							h3
+								font: 14px/18px $regular
+								text-decoration: underline
+						.rightSide
+							display: flex
+							align-items: center
+							.size
+								font-size: 14px
+								line-height: 18px
+								margin-right: 20px
+								text-transform: uppercase
+							.icon
+								width: 12px
+								height: 12px
+								flex: 0 0 auto
+								position: relative
+
+			.title
+				display: flex
+				position: relative
+				padding: 60px 0
+				cursor: pointer
+				.leftSide
+					display: flex
+					flex: 0 0 auto
+					width: 33.3%
+					.icon
+						width: 26px
+						height: 26px
+						background: #796A63
+						position: relative
+						margin-right: 34px
+						flex: 0 0 auto
+						.ic
+							transition: opacity .3s
+							svg
+								margin: auto
+					h3
+						font-size: 20px
+						line-height: 25px
+						letter-spacing: .1em
+				.rightSide
+					padding-top: 4px
+					max-width: 60%
+					p
+						font-size: 14px
+						line-height: 18px
+				.close
+					position: absolute
+					top: 0
+					bottom: 0
+					right: 10px
+					margin: auto 0
+					width: 33px
+					height: 33px
+					.cBtn
+						transition: opacity .3s
+						svg
+							margin: auto 
+					.opened
+						opacity: 0
+					.closed
+						opacity: 1
+			.content
+				height: 0
+				overflow: hidden
+				transition: height .3s
+				&::after
+					content: ''		
+					position: relative
+					display: block
+					width: 100%
+					height: 20px
+
+#faqTitle
+	padding-bottom: 108px
+	.title
+		.description
+			.feedbackBtn
+				text-decoration: underline
+				cursor: pointer
+
+#faq
+	padding-bottom: 100px
+	.faq
+		position: relative
+		padding: 100px 0 100px 10%
+		&::before
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			bottom: 0
+			right: -300%
+			background: $gray
+			z-index: -1
+		& > .item
+			border-bottom: 1px solid rgba(0,0,0,.5)
+			&:first-child
+				border-top: 1px solid rgba(0,0,0,.5)
+			&.active
+				.title
+					.close
+						.opened
+							opacity: 1
+						.closed
+							opacity: 0
+			.title
+				display: flex
+				justify-content: space-between
+				padding: 40px 40px 40px 0
+				cursor: pointer
+				h3
+					font-size: 20px
+					line-height: 25px
+					letter-spacing: 0.1em
+				.close
+					position: relative
+					width: 33px
+					height: 32px
+					.cBtn
+						width: 100%
+						height: 100%
+						svg
+							margin: auto
+					.opened
+						opacity: 0
+					.closed
+						opacity: 1
+			.content
+				padding-right: 20%
+				height: 0
+				overflow: hidden
+				transition: height .3s
+				&::after
+					content: ''		
+					position: relative
+					display: block
+					width: 100%
+					height: 40px
+
+				
 
 #prefooter
 	margin-bottom: 100px

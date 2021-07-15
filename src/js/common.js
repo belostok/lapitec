@@ -7,6 +7,15 @@ const feedbackBtn = document.querySelectorAll('.feedbackBtn')
 const menu = document.getElementById('menu')
 const menuButton = document.getElementById('menuButton')
 
+const formatBytes = (bytes, decimals = 2) => {
+    if (bytes === 0) return '0 Б'
+    const k = 1024
+    const dm = decimals < 0 ? 0 : decimals
+    const sizes = ['Б', 'кБ', 'мБ', 'гБ', 'тБ', 'пБ', 'EB', 'ZB', 'YB']
+    const i = Math.floor(Math.log(bytes) / Math.log(k))
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + ' ' + sizes[i]
+}
+
 const advantagesInit = () => {
     const advantagesItems = document.querySelectorAll('#advantages .item')
     Array.from(advantagesItems).forEach(e => {
@@ -48,6 +57,18 @@ const classActive = (el, el2) => {
         } else {
             el2.classList.add('active')
         }
+    }
+}
+
+const autoHeight = (content, container) => {
+    if (container.classList.contains('active')) {
+        content.style.height = 0
+    } else {
+        content.style.height = 'auto'
+        const height = content.offsetHeight
+        content.style.height = 0
+        content.style.transition = 'height .3s'
+        setTimeout(() => content.style.height = `${height}px`, 0)
     }
 }
 
@@ -164,6 +185,42 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     })
 
+    const getFile = document.querySelectorAll('a.fileSize')
+    Array.from(getFile).forEach(e => {
+        if (e.href.split('.').pop() === 'pdf') {
+            e.classList.add('pdf')
+        } else {
+            e.classList.add('zip')
+        }
+        const getFileSize = async () => {
+            const container = e.querySelector('.rightSide .size')
+            const fileImg = await fetch(e.href).then(r => r.blob())
+            const size = formatBytes(fileImg.size)
+            container.innerHTML = size
+        }
+        getFileSize()
+    })
+
+    const academyItems = document.querySelectorAll('#academy .academy > .item')
+    Array.from(academyItems).forEach(e => {
+        const title = e.querySelector('.title')
+        title.addEventListener('click', () => {
+            const content = e.querySelector('.content')
+            autoHeight(content, e)
+            classActive(e)
+        })
+    })
+
+    const faqItems = document.querySelectorAll('#faq .faq > .item')
+    Array.from(faqItems).forEach(e => {
+        const title = e.querySelector('.title')
+        title.addEventListener('click', () => {
+            const content = e.querySelector('.content')
+            autoHeight(content, e)
+            classActive(e)
+        })
+    })
+
     const projectsTitleSlider = new Swiper('.projectsTitleSlider', {
         speed: 500,
         spaceBetween: 20,
@@ -217,21 +274,21 @@ document.onreadystatechange = () => {
     }
 }
 
-
-DG.then(() => {
-    let map
-    const mapIcon = DG.icon({
-        iconUrl: '../img/marker.png',
-        iconSize: [33, 34]
+if (document.getElementById('contactsPage')) {
+    DG.then(() => {
+        let map
+        const mapIcon = DG.icon({
+            iconUrl: '../img/marker.png',
+            iconSize: [33, 34]
+        })
+        map = DG.map('map', {
+            center: [55.753466, 37.62017],
+            zoom: 10
+        })
+        DG.marker([55.749874, 37.53774], { icon: mapIcon }).addTo(map)
+        DG.marker([55.962681, 37.509696], { icon: mapIcon }).addTo(map)
     })
-    map = DG.map('map', {
-        center: [55.753466, 37.62017],
-        zoom: 10
-    })
-    DG.marker([55.749874, 37.53774], { icon: mapIcon }).addTo(map)
-    DG.marker([55.962681, 37.509696], { icon: mapIcon }).addTo(map)
-})
-
+}
 
 
 

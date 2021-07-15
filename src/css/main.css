@@ -1702,6 +1702,325 @@ header #menuButton .menuBtn .icon {
   height: 100%;
   width: 100%
 }
+#academyTitle {
+  padding-bottom: 100px
+}
+#academyTitle .title h1 {
+  max-width: 360px
+}
+#academy {
+  margin-bottom: 60px
+}
+#academy .academy {
+  padding: 100px 0 100px 10%;
+  position: relative
+}
+#academy .academy::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: -300%;
+  background: #e2e2e2;
+  z-index: -1
+}
+#academy .academy > .item {
+  border-bottom: 1px solid rgba(0,0,0,.5)
+}
+#academy .academy > .item:first-child {
+  border-top: 1px solid rgba(0,0,0,.5)
+}
+#academy .academy > .item.active .title .close .opened {
+  opacity: 1
+}
+#academy .academy > .item.active .title .close .closed {
+  opacity: 0
+}
+#academy .academy > .item.video .title .leftSide .icon .doc {
+  opacity: 0
+}
+#academy .academy > .item.video .title .leftSide .icon .video {
+  opacity: 1
+}
+#academy .academy > .item.video .content .row {
+  margin: 0 -5px
+}
+#academy .academy > .item.video .content .col {
+  padding: 0 5px
+}
+#academy .academy > .item.video .content .adaptHeightInner {
+  padding-top: 57%
+}
+#academy .academy > .item.video .content .item {
+  width: 100%;
+  cursor: pointer;
+  text-align: center;
+  margin-bottom: 40px
+}
+#academy .academy > .item.video .content .item .image {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: #000
+}
+#academy .academy > .item.video .content .item .image .play {
+  margin: auto;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content
+}
+#academy .academy > .item.video .content .item h3 {
+  font: 14px/18px EuclidSquare-Regular;
+  margin-top: 15px
+}
+#academy .academy > .item.doc .title .leftSide .icon .doc {
+  opacity: 1
+}
+#academy .academy > .item.doc .title .leftSide .icon .video {
+  opacity: 0
+}
+#academy .academy > .item.doc .content {
+  padding-left: 7%;
+  padding-right: 12%
+}
+#academy .academy > .item.doc .content .item {
+  margin-bottom: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center
+}
+#academy .academy > .item.doc .content .item.pdf .leftSide .icon .pdf {
+  opacity: 1
+}
+#academy .academy > .item.doc .content .item.zip .leftSide .icon .zip {
+  opacity: 1
+}
+#academy .academy > .item.doc .content .item .leftSide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  max-width: 80%
+}
+#academy .academy > .item.doc .content .item .leftSide .icon {
+  width: 18px;
+  height: 25px;
+  position: relative;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  margin-right: 30px
+}
+#academy .academy > .item.doc .content .item .leftSide .icon .fIcon {
+  opacity: 0
+}
+#academy .academy > .item.doc .content .item .leftSide h3 {
+  font: 14px/18px EuclidSquare-Regular;
+  text-decoration: underline
+}
+#academy .academy > .item.doc .content .item .rightSide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center
+}
+#academy .academy > .item.doc .content .item .rightSide .size {
+  font-size: 14px;
+  line-height: 18px;
+  margin-right: 20px;
+  text-transform: uppercase
+}
+#academy .academy > .item.doc .content .item .rightSide .icon {
+  width: 12px;
+  height: 12px;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  position: relative
+}
+#academy .academy > .item .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  padding: 60px 0;
+  cursor: pointer
+}
+#academy .academy > .item .title .leftSide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  width: 33.3%
+}
+#academy .academy > .item .title .leftSide .icon {
+  width: 26px;
+  height: 26px;
+  background: #796a63;
+  position: relative;
+  margin-right: 34px;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto
+}
+#academy .academy > .item .title .leftSide .icon .ic {
+  -webkit-transition: opacity .3s;
+  -o-transition: opacity .3s;
+  transition: opacity .3s
+}
+#academy .academy > .item .title .leftSide .icon .ic svg {
+  margin: auto
+}
+#academy .academy > .item .title .leftSide h3 {
+  font-size: 20px;
+  line-height: 25px;
+  letter-spacing: .1em
+}
+#academy .academy > .item .title .rightSide {
+  padding-top: 4px;
+  max-width: 60%
+}
+#academy .academy > .item .title .rightSide p {
+  font-size: 14px;
+  line-height: 18px
+}
+#academy .academy > .item .title .close {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 10px;
+  margin: auto 0;
+  width: 33px;
+  height: 33px
+}
+#academy .academy > .item .title .close .cBtn {
+  -webkit-transition: opacity .3s;
+  -o-transition: opacity .3s;
+  transition: opacity .3s
+}
+#academy .academy > .item .title .close .cBtn svg {
+  margin: auto
+}
+#academy .academy > .item .title .close .opened {
+  opacity: 0
+}
+#academy .academy > .item .title .close .closed {
+  opacity: 1
+}
+#academy .academy > .item .content {
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: height .3s;
+  -o-transition: height .3s;
+  transition: height .3s
+}
+#academy .academy > .item .content::after {
+  content: '';
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 20px
+}
+#faqTitle {
+  padding-bottom: 108px
+}
+#faqTitle .title .description .feedbackBtn {
+  text-decoration: underline;
+  cursor: pointer
+}
+#faq {
+  padding-bottom: 100px
+}
+#faq .faq {
+  position: relative;
+  padding: 100px 0 100px 10%
+}
+#faq .faq::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: -300%;
+  background: #e2e2e2;
+  z-index: -1
+}
+#faq .faq > .item {
+  border-bottom: 1px solid rgba(0,0,0,.5)
+}
+#faq .faq > .item:first-child {
+  border-top: 1px solid rgba(0,0,0,.5)
+}
+#faq .faq > .item.active .title .close .opened {
+  opacity: 1
+}
+#faq .faq > .item.active .title .close .closed {
+  opacity: 0
+}
+#faq .faq > .item .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 40px 40px 40px 0;
+  cursor: pointer
+}
+#faq .faq > .item .title h3 {
+  font-size: 20px;
+  line-height: 25px;
+  letter-spacing: .1em
+}
+#faq .faq > .item .title .close {
+  position: relative;
+  width: 33px;
+  height: 32px
+}
+#faq .faq > .item .title .close .cBtn {
+  width: 100%;
+  height: 100%
+}
+#faq .faq > .item .title .close .cBtn svg {
+  margin: auto
+}
+#faq .faq > .item .title .close .opened {
+  opacity: 0
+}
+#faq .faq > .item .title .close .closed {
+  opacity: 1
+}
+#faq .faq > .item .content {
+  padding-right: 20%;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: height .3s;
+  -o-transition: height .3s;
+  transition: height .3s
+}
+#faq .faq > .item .content::after {
+  content: '';
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 40px
+}
 #prefooter {
   margin-bottom: 100px
 }
