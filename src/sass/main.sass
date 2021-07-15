@@ -1294,10 +1294,8 @@ header
 			&.active
 				.title
 					.close
-						.opened
-							opacity: 1
 						.closed
-							opacity: 0
+							transform: rotate(-45deg)
 			&.video
 				.title
 					.leftSide
@@ -1424,13 +1422,11 @@ header
 					width: 33px
 					height: 33px
 					.cBtn
-						transition: opacity .3s
+						transition: transform .3s
 						svg
 							margin: auto 
-					.opened
-						opacity: 0
 					.closed
-						opacity: 1
+						transform: rotate(0)
 			.content
 				height: 0
 				overflow: hidden
@@ -1471,10 +1467,8 @@ header
 			&.active
 				.title
 					.close
-						.opened
-							opacity: 1
 						.closed
-							opacity: 0
+							transform: rotate(-45deg)
 			.title
 				display: flex
 				justify-content: space-between
@@ -1491,12 +1485,11 @@ header
 					.cBtn
 						width: 100%
 						height: 100%
+						transition: transform .3s
 						svg
 							margin: auto
-					.opened
-						opacity: 0
 					.closed
-						opacity: 1
+						transform: rotate(0)
 			.content
 				padding-right: 20%
 				height: 0
