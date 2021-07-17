@@ -384,6 +384,16 @@
   .secTitle .title .description p:not(:last-child) {
     margin-bottom: 30px
   }
+  .secTitle .bgImage {
+    top: 60px;
+    right: 0
+  }
+  .secTitle .bgImage img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover
+  }
   #materials {
     margin-bottom: 50px
   }
@@ -434,6 +444,102 @@
   }
   #materials .materials .item .text .features ul li {
     letter-spacing: .1em
+  }
+  #materialTitle {
+    padding: 130px 0 55px
+  }
+  #materialTitle .title h1::after {
+    content: none
+  }
+  #materialTitle .title h1 {
+    max-width: none;
+    margin-right: 0
+  }
+  #materialColors {
+    margin-top: 40px
+  }
+  #materialColors .colors .row {
+    margin: 0 -5px
+  }
+  #materialColors .colors .col {
+    padding: 0 5px
+  }
+  #materialColors .colors .adaptHeightInner {
+    padding-top: 100%
+  }
+  #materialColors .colors .item {
+    margin-bottom: 20px
+  }
+  #materialColors .colors .item h3 {
+    font-size: 14px;
+    line-height: 18px;
+    margin-top: 10px
+  }
+  #materialFinishing {
+    margin-top: 50px
+  }
+  #materialFinishing .wrapper::before {
+    left: -10px;
+    right: -10px
+  }
+  #materialFinishing .wrapper {
+    padding: 50px 0 20px
+  }
+  #materialFinishing .wrapper .title {
+    margin-bottom: 30px
+  }
+  #materialFinishing .wrapper .finishing {
+    margin-top: 30px
+  }
+  #materialFinishing .wrapper .finishing .row {
+    margin: 0 -5px
+  }
+  #materialFinishing .wrapper .finishing .col {
+    padding: 0 5px
+  }
+  #materialFinishing .wrapper .finishing .item {
+    margin-bottom: 20px
+  }
+  #materialFinishing .wrapper .finishing .item .adaptHeightInner {
+    padding-top: 58%
+  }
+  #materialFinishing .wrapper .finishing .item h3 {
+    font-size: 16px;
+    line-height: 20px;
+    margin-top: 10px
+  }
+  #materialProjects {
+    margin-top: 70px;
+    padding-bottom: 200px
+  }
+  #materialProjects .title {
+    height: auto;
+    margin-bottom: 40px;
+    display: block
+  }
+  #materialProjects .title h2 {
+    font-family: EuclidSquare-Bold
+  }
+  #materialProjects .sliderContainer .item .text {
+    display: block;
+    padding: 5px
+  }
+  #materialProjects .sliderContainer .item .text .leftSide {
+    margin-bottom: 10px
+  }
+  #materialProjects .sliderContainer .item .text .leftSide h3 {
+    font-size: 16px;
+    line-height: 20px
+  }
+  #materialProjects .sliderContainer .item .text ul li {
+    font-size: 14px;
+    line-height: 18px
+  }
+  #materialProjects .navigation {
+    right: auto;
+    top: auto;
+    left: 0;
+    bottom: -105px
   }
   #prefooter .items .row {
     margin: 0 -5px
