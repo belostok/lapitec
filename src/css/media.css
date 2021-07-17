@@ -834,6 +834,42 @@
     line-height: 18px;
     margin-right: 5px
   }
+  #faqTitle {
+    padding-bottom: 70px
+  }
+  #faq {
+    padding-bottom: 50px
+  }
+  #faq .leftCol .sideTitle {
+    left: -10px;
+    top: 90px!important
+  }
+  #faq .faq {
+    padding: 50px 0
+  }
+  #faq .faq::before {
+    right: -10px;
+    left: calc(-9% - 10px)
+  }
+  #faq .faq > .item .title {
+    padding: 30px 14% 30px 0;
+    position: relative
+  }
+  #faq .faq > .item .title h3 {
+    font-size: 18px;
+    line-height: 23px
+  }
+  #faq .faq > .item .title .close {
+    position: absolute;
+    right: 0;
+    top: 24px
+  }
+  #faq .faq > .item .content {
+    padding-right: 0
+  }
+  #faq .faq > .item .content::after {
+    height: 30px
+  }
   #prefooter .items .row {
     margin: 0 -5px
   }
