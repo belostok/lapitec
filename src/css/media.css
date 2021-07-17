@@ -7,6 +7,9 @@
     font-size: 22px;
     line-height: 28px
   }
+  select {
+    height: 46px
+  }
   .isMobile {
     display: block
   }
@@ -910,6 +913,49 @@
   #contactsPage .map {
     margin: 100px -10px 0 calc(-9% - 10px);
     width: auto
+  }
+  #projectsTitle {
+    padding-bottom: 50px
+  }
+  #projectsTitle .title {
+    padding-right: 0
+  }
+  #projectsTitle .title .description .filter {
+    margin-top: 0;
+    display: block
+  }
+  #projectsTitle .title .description .filter .item {
+    width: calc(50% - 5px);
+    margin-bottom: 10px;
+    display: inline-block;
+    height: 46px
+  }
+  #projectsTitle .title .description .filter .item:not(:last-child) {
+    float: left
+  }
+  #projectsTitle .title .description .filter .item:nth-child(1),
+  #projectsTitle .title .description .filter .item:nth-child(3) {
+    margin-right: 10px
+  }
+  #projectsPage {
+    padding-bottom: 85px
+  }
+  #projectsPage .projects .adaptHeightInner {
+    padding-top: 71%
+  }
+  #projectsPage .projects .item {
+    margin-bottom: 10px
+  }
+  #projectsPage .projects .item .text {
+    padding: 5px
+  }
+  #projectsPage .projects .item .text .upperSide h3 {
+    font-size: 16px;
+    line-height: 20px
+  }
+  #projectsPage .projects .item .text .lowerSide {
+    display: block;
+    margin-top: 10px
   }
   #prefooter .items .row {
     margin: 0 -5px
