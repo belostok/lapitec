@@ -24,7 +24,8 @@ a
 		color: $black
 input, textarea, button, a
 	outline: none
-
+input, textarea
+	border-radius: 0
 strong
 	font-family: $bold
 
@@ -109,56 +110,11 @@ select
 		background: $white
 		color: $black
 
-#sandwich
-	display: none
-	width: 29px
-	height: 16px
-	z-index: 9
-	.sw-topper 
-		position: relative
-		top: 0
-		width: 29px
-		height: 1px
-		background: $white
-		border: none
-		border-radius: 4px
-		transition: transform 0.5s, top 0.2s, background .5s
-	.sw-bottom
-		position: relative
-		width: 29px
-		height: 1px
-		top: 7px
-		background: $white
-		border: none
-		border-radius: 4px
-		transition: transform 0.5s, top 0.2s, background .5s
-		transition-delay: 0.2s, 0s
-	.sw-footer
-		position: relative
-		width: 29px
-		height: 1px
-		top: 14px
-		background: $white
-		border: none
-		border-radius: 4px
-		transition: all 0.5s
-		transition-delay: 0.1s
-	&.active
-		.sw-topper
-			top: 8px
-			background: $black
-			transform: rotate(135deg)
-		.sw-bottom
-			top: 7px
-			background: $black
-			transform: rotate(-135deg)
-		.sw-footer
-			opacity: 0
-			top: 0
-			transform: rotate(180deg)
+.prev, .next
+	outline: none
 
 .isMobile
-	display: none !important
+	display: none
 
 .adaptHeightInner
 	position: relative
@@ -293,6 +249,8 @@ body
 				p
 					font: 12px/15px $light
 					margin-left: 97px	
+				a
+					text-decoration: underline
 
 .underline
 	position: relative
@@ -340,7 +298,13 @@ body
 			a
 				margin-top: 44px
 
-
+#feedbackBtn
+	opacity: 1
+	pointer-events: all
+	transition: opacity .3s
+	&.active
+		opacity: 0
+		pointer-events: none
 
 header
 	position: fixed
@@ -373,13 +337,6 @@ header
 			margin-right: 60px
 			a
 				letter-spacing: .1em
-		#feedbackBtn
-			opacity: 1
-			pointer-events: all
-			transition: opacity .3s
-			&.active
-				opacity: 0
-				pointer-events: none
 	#menuButton
 		position: relative
 		width: 101px
@@ -1481,7 +1438,7 @@ header
 				.close
 					position: relative
 					width: 33px
-					height: 32px
+					height: 33px
 					.cBtn
 						width: 100%
 						height: 100%

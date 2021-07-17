@@ -160,9 +160,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const currentYear = document.querySelector('.currentYear')
     if (currentYear) { currentYear.innerHTML = new Date().getFullYear() }
 
+    // const body = document.querySelector('html')
     menuInitClose()
     menuButton.addEventListener('click', () => {
         if (menuButton.classList.contains('active')) {
+            // isMobile && body.classList.remove('fixed')
             menuInitClose()
             menu.classList.remove('active')
             menuButton.classList.remove('active')
@@ -170,6 +172,7 @@ document.addEventListener('DOMContentLoaded', () => {
             menuOpen(menu)
             menu.classList.add('active')
             menuButton.classList.add('active')
+            // isMobile && body.classList.add('fixed')
         }
     })
 
@@ -180,6 +183,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 menuOpen(feedback)
                 menuButton.classList.add('active')
                 classActive(headerFeedbackBtn, feedback)
+                // isMobile && body.classList.add('fixed')
             }
 
         })
@@ -236,17 +240,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const projectsSlider = new Swiper('.projectsSlider', {
         speed: 500,
         spaceBetween: 10,
-        slidesPerView: 'auto',
+        slidesPerView: 1,
         loop: true,
-        loopedSlides: projectsSlides.length,
-        slideToClickedSlide: true,
-        allowTouchMove: false,
         thumbs: {
             swiper: projectsTitleSlider
         },
         navigation: {
             nextEl: '#projects .next',
             prevEl: '#projects .prev'
+        },
+        breakpoints: {
+            1024: {
+                slidesPerView: 'auto',
+                loopedSlides: projectsSlides.length,
+                slideToClickedSlide: true,
+                allowTouchMove: false
+            }
         }
     })
 
@@ -269,7 +278,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.onreadystatechange = () => {
     if (document.readyState === 'complete') {
-        advantagesInit()
+        !isMobile && advantagesInit()
         sideTitlesInit()
     }
 }
@@ -289,44 +298,3 @@ if (document.getElementById('contactsPage')) {
         DG.marker([55.962681, 37.509696], { icon: mapIcon }).addTo(map)
     })
 }
-
-
-
- // const sandwichBtn = document.getElementById('sandwich')
-    // const menu = document.querySelector('header .menu')
-    // const menuHeight = window.getComputedStyle(menu).height
-    // const menuItems = menu.querySelectorAll('li')
-    // const menuOpen = () => {
-    //     header.classList.add('menuOpen')
-    //     sandwichBtn.classList.add('active')
-    //     menu.style.top = 0
-    // }
-    // const menuClose = () => {
-    //     header.classList.remove('menuOpen')
-    //     sandwichBtn.classList.remove('active')
-    //     menu.style.top = `-${menuHeight}`
-    // }
-    // menu.style.top = `-${menuHeight}`
-    // sandwichBtn.addEventListener('click', () => {
-    //     if (sandwichBtn.classList.contains('active')) {
-    //         menuClose()
-    //     } else {
-    //         menuOpen()
-    //     }
-    // })
-    // document.addEventListener('touchstart', e => {
-    //     if (menu !== e.target &&
-    //         !menu.contains(e.target) &&
-    //         sandwichBtn !== e.target &&
-    //         !sandwichBtn.contains(e.target) &&
-    //         sandwichBtn.classList.contains('active')) {
-    //         menuClose()
-    //     }
-    // })
-    // Array.from(menuItems).forEach(e => {
-    //     e.addEventListener('click', () => {
-    //         if (sandwichBtn.classList.contains('active')) {
-    //             menuClose()
-    //         }
-    //     })
-    // })
