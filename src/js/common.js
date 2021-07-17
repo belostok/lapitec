@@ -288,7 +288,7 @@ if (document.getElementById('contactsPage')) {
         let map
         const mapIcon = DG.icon({
             iconUrl: '../img/marker.png',
-            iconSize: [33, 34]
+            iconSize: isMobile ? [23, 24] : [33, 34]
         })
         map = DG.map('map', {
             center: [55.753466, 37.62017],
