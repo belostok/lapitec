@@ -14,6 +14,9 @@
     padding-left: 10px;
     padding-right: 10px
   }
+  .sideTitle p::after {
+    height: 2px
+  }
   header > .container .wrapper {
     padding: 15px 0
   }
@@ -749,6 +752,87 @@
   #warranty .warranty > ul > li::before {
     width: 18px;
     left: -30px
+  }
+  #academyTitle {
+    padding-bottom: 70px
+  }
+  #academy {
+    margin-bottom: 50px
+  }
+  #academy .leftCol .sideTitle {
+    left: -10px;
+    top: 145px!important
+  }
+  #academy .academy {
+    padding: 50px 0
+  }
+  #academy .academy::before {
+    left: calc(-9% - 10px);
+    right: -10px
+  }
+  #academy .academy > .item .title {
+    display: block;
+    padding: 40px 0
+  }
+  #academy .academy > .item .title .leftSide {
+    width: 85%
+  }
+  #academy .academy > .item .title .leftSide h3 {
+    font-size: 18px;
+    line-height: 23px
+  }
+  #academy .academy > .item .title .leftSide .icon {
+    margin-right: 30px
+  }
+  #academy .academy > .item .title .rightSide {
+    max-width: none;
+    padding-top: 30px
+  }
+  #academy .academy > .item .title .close {
+    bottom: auto;
+    top: 34px;
+    right: 0
+  }
+  #academy .academy > .item .content::after {
+    height: 30px
+  }
+  #academy .academy > .item.video .content .adaptHeightInner {
+    padding-top: 68%
+  }
+  #academy .academy > .item.video .content .item h3 {
+    font-size: 12px;
+    line-height: 15px;
+    margin-top: 10px
+  }
+  #academy .academy > .item.video .content .item .image .play svg {
+    width: 17px;
+    height: 17px
+  }
+  #academy .academy > .item.doc .content {
+    padding: 0
+  }
+  #academy .academy > .item.doc .content .item {
+    margin-bottom: 20px;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start
+  }
+  #academy .academy > .item.doc .content .item .leftSide h3 {
+    text-transform: none
+  }
+  #academy .academy > .item.doc .content .item .leftSide .icon {
+    margin-right: 10px
+  }
+  #academy .academy > .item.doc .content .item .leftSide {
+    max-width: 73%;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start
+  }
+  #academy .academy > .item.doc .content .item .rightSide .size {
+    font-size: 12px;
+    line-height: 18px;
+    margin-right: 5px
   }
   #prefooter .items .row {
     margin: 0 -5px
