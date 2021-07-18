@@ -3,6 +3,7 @@ const isMobile = window.matchMedia('(max-width: 768px)').matches
 
 const feedback = document.getElementById('feedback')
 const headerFeedbackBtn = document.getElementById('feedbackBtn')
+const headerFeedbackBtnMobile = document.getElementById('feedbackBtnMobile')
 const feedbackBtn = document.querySelectorAll('.feedbackBtn')
 const menu = document.getElementById('menu')
 const menuButton = document.getElementById('menuButton')
@@ -161,7 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (currentYear) { currentYear.innerHTML = new Date().getFullYear() }
 
     // const body = document.querySelector('html')
-    menuInitClose()
+
     menuButton.addEventListener('click', () => {
         if (menuButton.classList.contains('active')) {
             // isMobile && body.classList.remove('fixed')
@@ -182,7 +183,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 menu.classList.contains('active') && menu.classList.remove('active')
                 menuOpen(feedback)
                 menuButton.classList.add('active')
-                classActive(headerFeedbackBtn, feedback)
+                classActive(isMobile ? headerFeedbackBtnMobile : headerFeedbackBtn, feedback)
                 // isMobile && body.classList.add('fixed')
             }
 
@@ -278,6 +279,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.onreadystatechange = () => {
     if (document.readyState === 'complete') {
+        menuInitClose()
         !isMobile && advantagesInit()
         sideTitlesInit()
     }
