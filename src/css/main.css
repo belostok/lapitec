@@ -39,6 +39,7 @@ textarea {
   outline: 0
 }
 input,
+select,
 textarea {
   border-radius: 0
 }

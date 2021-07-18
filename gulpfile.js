@@ -10,6 +10,8 @@ const imagemin     = require('gulp-imagemin');
 const cache        = require('gulp-cache');
 const del          = require('del');
 
+const distPath = 'dist/';
+
 function scripts() {
 	return src([
 		'./node_modules/swiper/swiper-bundle.min.js',
@@ -48,7 +50,7 @@ function csslibs() {
 function images() {
 	return src('src/img/**/*')
 	.pipe(cache(imagemin()))
-	.pipe(dest('dist/img/'))
+	.pipe(dest(`${distPath}img/`))
 }
 
 function clear() {
@@ -56,7 +58,7 @@ function clear() {
 }
 
 function clean() {
-	return del(['dist/']);
+	return del([distPath]);
 }
 
 function startwatch() {
@@ -75,7 +77,7 @@ function build() {
 		'!src/css/libs.css',
 		'!src/css/*.map'
 	], { base: 'src/', allowEmpty: true })
-	.pipe(dest('dist/'));
+	.pipe(dest(distPath));
 }
 
 exports.browsersync  = browsersync;
