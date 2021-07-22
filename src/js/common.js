@@ -289,7 +289,7 @@ if (document.getElementById('contactsPage')) {
     DG.then(() => {
         let map
         const mapIcon = DG.icon({
-            iconUrl: '../img/marker.png',
+            iconUrl: '/assets/app/img/marker.png',
             iconSize: isMobile ? [23, 24] : [33, 34]
         })
         map = DG.map('map', {

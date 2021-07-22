@@ -957,6 +957,47 @@
     display: block;
     margin-top: 10px
   }
+  #specification {
+    margin-bottom: 150px
+  }
+  #specification::after,
+  #specification::before {
+    content: '';
+    background-image: url(../img/scroll-x.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    right: 10px
+  }
+  #specification::before {
+    top: -55px
+  }
+  #specification::after {
+    bottom: -90px
+  }
+  #specification .specification {
+    overflow-x: scroll;
+    margin: 0 -10px;
+    width: auto
+  }
+  #specification .specification table {
+    width: 470px
+  }
+  #specification .specification table h3 {
+    font-size: 12px;
+    line-height: 15px
+  }
+  #specification .specification table img {
+    max-height: 60px;
+    max-width: 60px
+  }
+  #specification .specification table tr td,
+  #specification .specification table tr th {
+    padding: 15px 5px;
+    height: 100px
+  }
   #prefooter .items .row {
     margin: 0 -5px
   }
