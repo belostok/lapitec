@@ -170,6 +170,7 @@
         display: block
         margin-bottom: 40px
         .title
+            position: relative
             margin-bottom: 20px
     #projects .titleContainer .projectsTitleSlider
         margin-left: 0
@@ -179,14 +180,16 @@
         display: block
         max-width: none
         width: 100%
-    #projects .titleContainer .projectsTitleSlider .item .name::after
-        content: none
-    #projects .titleContainer .projectsTitleSlider .item .material
-        margin: 30px 0 0
-        padding: 0
-        max-width: none
-    #projects .titleContainer .projectsTitleSlider .item .material h3
-        font: 14px/18px $regular
+        margin-left: 0
+    #projects .titleContainer .projectsTitleSlider .materials
+        margin-top: 30px
+        display: block
+    #projects .titleContainer .projectsTitleSlider .materials ul
+        margin-top: 10px
+    #projects .titleContainer .projectsTitleSlider .materials ul li
+        margin-bottom: 5px
+    #projects .titleContainer .projectsTitleSlider .materials ul li:not(:last-child)
+        margin-right: 0
     #projects .sliderContainer .navigation
         left: 0
         top: auto
