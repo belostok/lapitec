@@ -10,8 +10,8 @@ const imagemin = require('gulp-imagemin');
 const cache = require('gulp-cache');
 const del = require('del');
 
-// const distPath = 'C:/OpenServer/domains/lapitec.loc/assets/app/';
-const distPath = 'dist/';
+const distPath = 'C:/OpenServer/domains/lapitec.loc/assets/app/';
+// const distPath = 'dist/';
 
 function scripts() {
 	return src([

@@ -321,11 +321,14 @@
   #project .project .rightSide .text p {
     margin-top: 30px
   }
-  #project .project .leftSide .item:not(:last-child) {
-    margin-bottom: 10px
+  #project .project .leftSide .item:not(:first-child) {
+    margin-top: 10px
   }
   #project .project .leftSide .item {
     pointer-events: none
+  }
+  #project .project .leftSide .item:not(:nth-child(-n+3)) {
+    display: block
   }
   #use {
     margin-top: 60px

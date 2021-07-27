@@ -663,13 +663,19 @@ header #menuButton .menuBtn .icon {
   margin-top: 110px
 }
 #projects .titleContainer {
-  margin-bottom: 60px;
+  margin-bottom: 21px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: start;
   -ms-flex-align: start;
-  align-items: flex-start
+  align-items: flex-start;
+  position: relative
+}
+#projects .titleContainer .title {
+  position: absolute;
+  left: 0;
+  top: 0
 }
 #projects .titleContainer .title h2 {
   display: -webkit-box;
@@ -687,44 +693,35 @@ header #menuButton .menuBtn .icon {
   margin-top: 15px;
   margin-left: 54px
 }
-#projects .titleContainer .projectsTitleSlider {
-  margin-left: 54px
+#projects .titleContainer .projectsTitleSlider .name {
+  margin-left: 400px
 }
-#projects .titleContainer .projectsTitleSlider .item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex
-}
-#projects .titleContainer .projectsTitleSlider .item .name {
+#projects .titleContainer .projectsTitleSlider .materials {
+  margin-top: 80px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: -webkit-min-content;
-  width: -moz-min-content;
-  width: min-content;
-  max-width: 25%
+  max-width: 935px
 }
-#projects .titleContainer .projectsTitleSlider .item .name::after {
-  content: '';
-  height: 3px;
-  width: 103px;
-  background: #000;
-  margin-top: 15px;
-  margin-left: 54px;
+#projects .titleContainer .projectsTitleSlider .materials h4 {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 auto;
-  flex: 0 0 auto
-}
-#projects .titleContainer .projectsTitleSlider .item .material {
-  margin-left: 54px;
-  padding-top: 5px;
-  max-width: 24%
-}
-#projects .titleContainer .projectsTitleSlider .item .material h3 {
-  font-size: 16px;
-  line-height: 20px;
+  flex: 0 0 auto;
+  margin-right: 24px;
+  font: 16px/20px EuclidSquare-Bold;
   letter-spacing: .1em;
-  text-transform: none
+  text-transform: lowercase
+}
+#projects .titleContainer .projectsTitleSlider .materials ul li {
+  display: inline-block;
+  letter-spacing: .1em;
+  margin-bottom: 19px
+}
+#projects .titleContainer .projectsTitleSlider .materials ul li:not(:last-child) {
+  margin-right: 30px
+}
+#projects .titleContainer .projectsTitleSlider .materials ul li:not(:last-child)::after {
+  content: ','
 }
 #projects .sideTitle {
   z-index: 2
@@ -2110,8 +2107,11 @@ header #menuButton .menuBtn .icon {
 #project .project .leftSide .item {
   width: 100%
 }
-#project .project .leftSide .item:not(:last-child) {
-  margin-bottom: 50px
+#project .project .leftSide .item:not(:nth-child(-n+3)) {
+  display: none
+}
+#project .project .leftSide .item:not(:first-child) {
+  margin-top: 50px
 }
 #project .project .leftSide .item img {
   width: 100%

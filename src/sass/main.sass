@@ -487,10 +487,14 @@ header
 #projects
 	margin-top: 110px
 	.titleContainer
-		margin-bottom: 60px
+		margin-bottom: 21px
 		display: flex
 		align-items: flex-start
+		position: relative
 		.title
+			position: absolute
+			left: 0
+			top: 0
 			h2
 				display: flex
 				align-items: flex-start
@@ -502,30 +506,27 @@ header
 					margin-top: 15px
 					margin-left: 54px
 		.projectsTitleSlider
-			margin-left: 54px
-			.item
+			.name
+				margin-left: 400px
+			.materials
+				margin-top: 80px
 				display: flex
-				.name
-					display: flex
-					width: min-content
-					max-width: 25%
-					&::after
-						content: ''
-						height: 3px
-						width: 103px
-						background: $black
-						margin-top: 15px
-						margin-left: 54px
-						flex: 0 0 auto
-				.material
-					margin-left: 54px
-					padding-top: 5px
-					max-width: 24%
-					h3
-						font-size: 16px
-						line-height: 20px
-						letter-spacing: 0.1em
-						text-transform: none
+				max-width: 935px
+				h4
+					flex: 0 0 auto
+					margin-right: 24px
+					font: 16px/20px $bold
+					letter-spacing: .1em
+					text-transform: lowercase
+				ul
+					li
+						display: inline-block
+						letter-spacing: .1em
+						margin-bottom: 19px
+						&:not(:last-child)
+							margin-right: 30px
+							&::after
+								content: ','
 	.sideTitle
 		z-index: 2
 	.sliderContainer
@@ -1548,8 +1549,10 @@ header
 			width: 30%
 			.item
 				width: 100%
-				&:not(:last-child)
-					margin-bottom: 50px					
+				&:not(:nth-child(-n+3))
+					display: none
+				&:not(:first-child)
+					margin-top: 50px				
 				img
 					width: 100%
 		.rightSide
