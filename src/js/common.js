@@ -158,6 +158,24 @@ document.addEventListener('scroll', () => {
 
 document.addEventListener('DOMContentLoaded', () => {
 
+    const bioSlider = new Swiper('.bioSlider', {
+        speed: 500,
+        spaceBetween: 20,
+        slidesPerView: 1,
+        loop: true,
+        effect: 'fade',
+        fadeEffect: {
+            crossFade: true
+        },
+        autoplay: {
+            delay: 4000
+        },
+        navigation: {
+            nextEl: '#bioContent .next',
+            prevEl: '#bioContent .prev'
+        }
+    })
+
     const scrollAnimations = !isMobile && sal()
 
     const currentYear = document.querySelector('.currentYear')
@@ -288,6 +306,8 @@ document.addEventListener('DOMContentLoaded', () => {
         '.projectSlider .swiper-slide:not(.swiper-slide-duplicate) .item'
     )
     !isMobile && Array.from(projectSlides).forEach(e => e.dataset.fancybox = 'gallery2')
+
+    
 
     const callbackForm = document.getElementById('callbackForm')
     callbackForm.addEventListener('submit', formSend)
