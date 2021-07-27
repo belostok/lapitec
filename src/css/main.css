@@ -2125,6 +2125,11 @@ header #menuButton .menuBtn .icon {
 #project .project .rightSide .sliderContainer {
   position: relative
 }
+#project .project .rightSide .sliderContainer .swiper-pagination {
+  font: 18px/23px EuclidSquare-Medium;
+  letter-spacing: .3s;
+  bottom: -50px
+}
 #project .project .rightSide .sliderContainer .next,
 #project .project .rightSide .sliderContainer .prev {
   position: absolute;
@@ -2155,7 +2160,7 @@ header #menuButton .menuBtn .icon {
   height: 100%
 }
 #project .project .rightSide .text {
-  padding-top: 50px
+  padding-top: 90px
 }
 #project .project .rightSide .text h3 {
   margin-top: 40px;

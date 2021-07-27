@@ -257,6 +257,38 @@
     top: auto;
     bottom: -105px
   }
+  #projectTitle {
+    padding-bottom: 60px
+  }
+  #projectTitle .characteristics {
+    margin-top: 50px
+  }
+  #projectTitle .characteristics .item {
+    margin-bottom: 50px
+  }
+  #projectTitle .characteristics h3 {
+    margin-bottom: 30px
+  }
+  #project .project {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column
+  }
+  #project .project .leftSide,
+  #project .project .rightSide {
+    width: 100%
+  }
+  #project .project .leftSide {
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2
+  }
+  #project .project .rightSide {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1
+  }
   #use {
     margin-top: 60px
   }

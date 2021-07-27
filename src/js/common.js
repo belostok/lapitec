@@ -278,6 +278,10 @@ document.addEventListener('DOMContentLoaded', () => {
         navigation: {
             nextEl: '#project .next',
             prevEl: '#project .prev'
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'fraction'
         }
     })
     const projectSlides = document.querySelectorAll(
