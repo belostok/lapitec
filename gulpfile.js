@@ -10,12 +10,14 @@ const imagemin = require('gulp-imagemin');
 const cache = require('gulp-cache');
 const del = require('del');
 
-const distPath = 'C:/OpenServer/domains/lapitec.loc/assets/app/';
+// const distPath = 'C:/OpenServer/domains/lapitec.loc/assets/app/';
+const distPath = 'dist/';
 
 function scripts() {
 	return src([
 		'./node_modules/swiper/swiper-bundle.min.js',
-		'./node_modules/@fancyapps/ui/dist/fancybox.umd.js'
+		'./node_modules/@fancyapps/ui/dist/fancybox.umd.js',
+		'./node_modules/sal.js/dist/sal.js'
 	])
 		.pipe(concat('libs.min.js'))
 		.pipe(uglify())

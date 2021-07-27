@@ -21,6 +21,7 @@
     "@fancyapps/ui": "^4.0.0-alpha.4",
     "bootstrap": "^5.0.2",
     "normalize.css": "^8.0.1",
+    "sal.js": "^0.8.5",
     "swiper": "^6.7.5"
   }
 }

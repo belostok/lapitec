@@ -12,7 +12,7 @@ const formatBytes = (bytes, decimals = 2) => {
     if (bytes === 0) return '0 Б'
     const k = 1024
     const dm = decimals < 0 ? 0 : decimals
-    const sizes = ['Б', 'кБ', 'мБ', 'гБ', 'тБ', 'пБ', 'EB', 'ZB', 'YB']
+    const sizes = ['Б', 'кБ', 'мБ', 'гБ', 'тБ', 'пБ', 'эБ', 'зБ', 'йБ']
     const i = Math.floor(Math.log(bytes) / Math.log(k))
     return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + ' ' + sizes[i]
 }
@@ -158,14 +158,13 @@ document.addEventListener('scroll', () => {
 
 document.addEventListener('DOMContentLoaded', () => {
 
+    const scrollAnimations = !isMobile && sal()
+
     const currentYear = document.querySelector('.currentYear')
     if (currentYear) { currentYear.innerHTML = new Date().getFullYear() }
 
-    // const body = document.querySelector('html')
-
     menuButton.addEventListener('click', () => {
         if (menuButton.classList.contains('active')) {
-            // isMobile && body.classList.remove('fixed')
             menuInitClose()
             menu.classList.remove('active')
             menuButton.classList.remove('active')
@@ -173,7 +172,6 @@ document.addEventListener('DOMContentLoaded', () => {
             menuOpen(menu)
             menu.classList.add('active')
             menuButton.classList.add('active')
-            // isMobile && body.classList.add('fixed')
         }
     })
 
@@ -184,7 +182,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 menuOpen(feedback)
                 menuButton.classList.add('active')
                 classActive(isMobile ? headerFeedbackBtnMobile : headerFeedbackBtn, feedback)
-                // isMobile && body.classList.add('fixed')
             }
 
         })
@@ -271,6 +268,22 @@ document.addEventListener('DOMContentLoaded', () => {
             prevEl: '#materialProjects .prev'
         }
     })
+
+    const projectSlider = new Swiper('.projectSlider', {
+        speed: 500,
+        spaceBetween: 20,
+        slidesPerView: 1,
+        loop: true,
+        allowTouchMove: false,
+        navigation: {
+            nextEl: '#project .next',
+            prevEl: '#project .prev'
+        }
+    })
+    const projectSlides = document.querySelectorAll(
+        '.projectSlider .swiper-slide:not(.swiper-slide-duplicate) .item'
+    )
+    Array.from(projectSlides).forEach(e => e.dataset.fancybox = 'gallery2')
 
     const callbackForm = document.getElementById('callbackForm')
     callbackForm.addEventListener('submit', formSend)

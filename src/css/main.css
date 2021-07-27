@@ -383,7 +383,7 @@ body {
   width: 60%
 }
 .secTitle .title .description h2 {
-  font: 20px/25px EuclidSquare-Regular;
+  font: 20px/25px EuclidSquare-Bold;
   letter-spacing: .1em;
   margin-bottom: 40px
 }
@@ -2060,6 +2060,36 @@ header #menuButton .menuBtn .icon {
 #projectTitle {
   padding-bottom: 90px
 }
+#projectTitle .characteristics {
+  margin-top: 70px
+}
+#projectTitle .characteristics h3 {
+  font-size: 18px;
+  line-height: 23px;
+  letter-spacing: .1em;
+  margin-bottom: 40px
+}
+#projectTitle .characteristics ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center
+}
+#projectTitle .characteristics ul li::before {
+  content: '';
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  width: 70px;
+  height: 2px;
+  background: #000;
+  margin-right: 30px
+}
+#projectTitle .characteristics ul li:not(:last-child) {
+  margin-bottom: 10px
+}
 #project {
   padding-bottom: 100px
 }
@@ -2091,6 +2121,34 @@ header #menuButton .menuBtn .icon {
 }
 #project .project .rightSide .adaptHeightInner {
   padding-top: 64%
+}
+#project .project .rightSide .sliderContainer {
+  position: relative
+}
+#project .project .rightSide .sliderContainer .next,
+#project .project .rightSide .sliderContainer .prev {
+  position: absolute;
+  height: 30px;
+  width: 71px;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center
+}
+#project .project .rightSide .sliderContainer .prev {
+  left: -35px
+}
+#project .project .rightSide .sliderContainer .next {
+  right: -35px
+}
+#project .project .rightSide .projectSlider {
+  overflow: hidden
 }
 #project .project .rightSide .image {
   width: 100%;
