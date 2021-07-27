@@ -282,12 +282,50 @@
   #project .project .leftSide {
     -webkit-box-ordinal-group: 3;
     -ms-flex-order: 2;
-    order: 2
+    order: 2;
+    margin-top: 50px
   }
   #project .project .rightSide {
     -webkit-box-ordinal-group: 2;
     -ms-flex-order: 1;
     order: 1
+  }
+  #project .project .rightSide .sliderContainer {
+    margin-right: -10px;
+    margin-left: calc(-9% - 10px);
+    width: auto
+  }
+  #project .project .rightSide .item {
+    pointer-events: none
+  }
+  #project .project .rightSide .sliderContainer .swiper-pagination {
+    bottom: -43px
+  }
+  #project .project .rightSide .sliderContainer .next,
+  #project .project .rightSide .sliderContainer .prev {
+    top: auto;
+    bottom: -46px
+  }
+  #project .project .rightSide .sliderContainer .prev {
+    left: 10px
+  }
+  #project .project .rightSide .sliderContainer .next {
+    right: 10px
+  }
+  #project .project .rightSide .text {
+    padding-top: 50px
+  }
+  #project .project .rightSide .text h3 {
+    margin-bottom: 0
+  }
+  #project .project .rightSide .text p {
+    margin-top: 30px
+  }
+  #project .project .leftSide .item:not(:last-child) {
+    margin-bottom: 10px
+  }
+  #project .project .leftSide .item {
+    pointer-events: none
   }
   #use {
     margin-top: 60px

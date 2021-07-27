@@ -274,7 +274,7 @@ document.addEventListener('DOMContentLoaded', () => {
         spaceBetween: 20,
         slidesPerView: 1,
         loop: true,
-        allowTouchMove: false,
+        simulateTouch: false,
         navigation: {
             nextEl: '#project .next',
             prevEl: '#project .prev'
@@ -287,7 +287,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const projectSlides = document.querySelectorAll(
         '.projectSlider .swiper-slide:not(.swiper-slide-duplicate) .item'
     )
-    Array.from(projectSlides).forEach(e => e.dataset.fancybox = 'gallery2')
+    !isMobile && Array.from(projectSlides).forEach(e => e.dataset.fancybox = 'gallery2')
 
     const callbackForm = document.getElementById('callbackForm')
     callbackForm.addEventListener('submit', formSend)

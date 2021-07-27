@@ -1,5 +1,5 @@
 @import 'variables'
-    
+
 @media screen and (max-width: 768px)
     body
         font-size: 14px
@@ -64,7 +64,7 @@
     #menu .lowerSide nav ul li a
         font-size: 16px
         line-height: 20px
-    #feedback 
+    #feedback
         .wrapper
             padding: 55px 25px 80px
     #feedback .wrapper .title
@@ -87,7 +87,6 @@
     #feedback .wrapper form .lowerSide p
         margin-left: 0
         margin-top: 40px
-            
 
     #title
         margin-top: 60px
@@ -208,9 +207,35 @@
         width: 100%
     #project .project .leftSide
         order: 2
+        margin-top: 50px
     #project .project .rightSide
         order: 1
-    
+    #project .project .rightSide .sliderContainer
+        margin-right: -10px
+        margin-left: calc(-9% - 10px)
+        width: auto
+    #project .project .rightSide .item
+        pointer-events: none
+    #project .project .rightSide .sliderContainer .swiper-pagination
+        bottom: -43px
+    #project .project .rightSide .sliderContainer .next, #project .project .rightSide .sliderContainer .prev
+        top: auto
+        bottom: -46px
+    #project .project .rightSide .sliderContainer .prev
+        left: 10px
+    #project .project .rightSide .sliderContainer .next
+        right: 10px
+    #project .project .rightSide .text
+        padding-top: 50px
+    #project .project .rightSide .text h3
+        margin-bottom: 0
+    #project .project .rightSide .text p
+        margin-top: 30px
+    #project .project .leftSide .item:not(:last-child)
+        margin-bottom: 10px
+    #project .project .leftSide .item
+        pointer-events: none
+
     #use
         margin-top: 60px
     #use .title
@@ -300,7 +325,7 @@
         display: block
         padding-right: 11px
     .secTitle .title h1
-        font-size: 22px 
+        font-size: 22px
         line-height: 28px
     .secTitle .title .description
         width: 100%
@@ -361,7 +386,6 @@
     #materials .materials .item .text .features ul li
         letter-spacing: .1em
 
-
     #materialTitle
         padding: 130px 0 55px
     #materialTitle .title h1::after
@@ -408,7 +432,7 @@
         font-size: 16px
         line-height: 20px
         margin-top: 10px
-    
+
     #materialProjects
         margin-top: 70px
         padding-bottom: 200px
@@ -583,7 +607,7 @@
 
     #academyTitle
         padding-bottom: 70px
-    
+
     #academy
         margin-bottom: 50px
         .leftCol
@@ -640,7 +664,7 @@
         font-size: 12px
         line-height: 18px
         margin-right: 5px
-            
+
     #faqTitle
         padding-bottom: 70px
 
@@ -686,10 +710,10 @@
         font-size: 16px
         line-height: 20px
         margin-bottom: 20px
-    #contactsPage .text .item a:not(:last-child), 
+    #contactsPage .text .item a:not(:last-child),
     #contactsPage .text .item p:not(:last-child)
         margin-bottom: 20px
-    #contactsPage .text .item a, 
+    #contactsPage .text .item a,
     #contactsPage .text .item p
         font-size: 16px
         line-height: 20px
@@ -717,7 +741,7 @@
             float: left
         &:nth-child(1), &:nth-child(3)
             margin-right: 10px
-    
+
     #projectsPage
         padding-bottom: 85px
     #projectsPage .projects .adaptHeightInner
@@ -732,7 +756,7 @@
     #projectsPage .projects .item .text .lowerSide
         display: block
         margin-top: 10px
-       
+
     #specification
         margin-bottom: 150px
         &::after, &::before
@@ -775,7 +799,7 @@
 
     footer
         padding: 50px 0 60px
-        background: $gray  
+        background: $gray
     footer .wrapper
         padding: 0 0 0 8.33333333%
         display: block
@@ -784,7 +808,7 @@
         position: relative
         opacity: 1
         &::after
-            content: '' 
+            content: ''
             background: #796A63
             position: absolute
             bottom: 0
@@ -802,7 +826,6 @@
         width: max-content
     footer .wrapper nav ul li:not(:last-child)
         margin: 0 0 20px
-
 
 @media screen and (max-width: 320px)
     header .contacts
