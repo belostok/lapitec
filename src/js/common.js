@@ -279,7 +279,6 @@ document.addEventListener('DOMContentLoaded', () => {
         speed: 500,
         spaceBetween: 10,
         slidesPerView: 2,
-        slidesPerGroup: 2,
         loop: true,
         navigation: {
             nextEl: '#materialProjects .next',

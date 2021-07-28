@@ -1075,6 +1075,125 @@
     padding: 15px 5px;
     height: 100px
   }
+  #bioPageTitle {
+    padding-bottom: 70px
+  }
+  #bioTitle .adaptHeightInner {
+    margin-right: -10px;
+    padding-top: 192%;
+    width: auto
+  }
+  #bioTitle .wrapper {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end
+  }
+  #bioTitle .wrapper h2 {
+    font-size: 20px;
+    width: 303px
+  }
+  #bioHistory {
+    margin-top: 70px
+  }
+  #bioHistory .image {
+    margin: 0 -10px;
+    width: auto;
+    height: 128vw
+  }
+  #bioHistory .wrapper {
+    display: block;
+    margin-top: 20px;
+    padding-bottom: 0
+  }
+  #bioHistory .wrapper p {
+    font-size: 16px;
+    line-height: 30px
+  }
+  #bioNature {
+    margin-top: 70px
+  }
+  #bioNature .adaptHeightContent {
+    position: relative;
+    left: auto;
+    right: auto;
+    top: auto;
+    bottom: auto
+  }
+  #bioNature .adaptHeightInner {
+    margin: 0 -10px;
+    width: auto;
+    padding-top: 0;
+    height: auto
+  }
+  #bioNature .wrapper {
+    display: block;
+    padding: 60px 30px
+  }
+  #bioNature .wrapper h3 {
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: .1em
+  }
+  #bioContent {
+    margin-top: 70px
+  }
+  #bioContent .wrapper .text h3 {
+    font-size: 22px;
+    line-height: 28px;
+    margin-bottom: 40px
+  }
+  #bioContent .wrapper {
+    display: block;
+    padding-bottom: 40px
+  }
+  #bioContent .sliderContainer .text {
+    margin-top: 21px
+  }
+  #bioContent h3 {
+    font-size: 18px;
+    line-height: 23px
+  }
+  #bioContent .sliderContainer .navigation .next,
+  #bioContent .sliderContainer .navigation .prev {
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+    position: relative
+  }
+  #bioContent .sliderContainer .navigation .next svg,
+  #bioContent .sliderContainer .navigation .prev svg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto 0
+  }
+  #bioContent .sliderContainer .navigation .next svg {
+    right: 0
+  }
+  #bioContent .sliderContainer .navigation {
+    bottom: -3px
+  }
+  #bioView {
+    margin: 70px 0 50px
+  }
+  #bioView .adaptHeightInner {
+    margin: 0 -10px;
+    width: auto;
+    padding-top: 99%
+  }
+  #bioView .wrapper {
+    display: block;
+    margin-top: 70px
+  }
+  #bioView .wrapper .text h3 {
+    font-size: 22px;
+    line-height: 28px;
+    letter-spacing: .3em;
+    margin-bottom: 40px
+  }
+  #bioView .wrapper .text p:not(:last-of-type) {
+    margin-bottom: 18px
+  }
   #prefooter .items .row {
     margin: 0 -5px
   }
