@@ -276,17 +276,58 @@ body {
   line-height: 20px
 }
 .linkHover {
-  font-weight: 400;
-  -webkit-transition: font-weight .3s,color .3s;
-  -o-transition: font-weight .3s,color .3s;
-  transition: font-weight .3s,color .3s
+  -webkit-transition: color .3s;
+  -o-transition: color .3s;
+  transition: color .3s
 }
 .linkHover:hover {
-  font-weight: 700
+  font-family: EuclidSquare-Bold
 }
 .linkHover:active {
-  font-weight: 700;
+  font-family: EuclidSquare-Bold;
   color: #796a63
+}
+.animatedBtn {
+  border: 1px solid #000;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s
+}
+.animatedBtn::after {
+  content: '';
+  background: #fff;
+  position: absolute;
+  z-index: -1;
+  display: block;
+  padding: 10px 40px;
+  top: 0;
+  bottom: 0;
+  left: -100%;
+  right: 100%;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s
+}
+.animatedBtn:hover {
+  color: #000!important
+}
+.animatedBtn:hover::after {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0
+}
+.animatedBtn.animatedBtnWhite {
+  border: 1px solid #fff
+}
+.animatedBtn.animatedBtnWhite::after {
+  background: #000
+}
+.animatedBtn.animatedBtnWhite:hover {
+  color: #fff!important
 }
 .topMenu {
   position: absolute;
@@ -617,7 +658,7 @@ header #menuButton .menuBtn .icon {
   fill: transparent
 }
 #title .leftCol .social .item:active p {
-  font-weight: 700
+  font-family: EuclidSquare-Bold
 }
 #title .leftCol .social .item:active p::after {
   opacity: 0
@@ -637,11 +678,7 @@ header #menuButton .menuBtn .icon {
   transition: fill .3s
 }
 #title .leftCol .social .item p {
-  position: relative;
-  font-weight: 400;
-  -webkit-transition: font-weight .3s;
-  -o-transition: font-weight .3s;
-  transition: font-weight .3s
+  position: relative
 }
 #title .leftCol .social .item p::after {
   content: '';
@@ -1829,6 +1866,21 @@ header #menuButton .menuBtn .icon {
   -ms-flex-align: center;
   align-items: center
 }
+#contactsPage .text .social a:hover p::after {
+  opacity: 1
+}
+#contactsPage .text .social a:hover svg rect {
+  fill: transparent
+}
+#contactsPage .text .social a:active p {
+  font-family: EuclidSquare-Bold
+}
+#contactsPage .text .social a:active p::after {
+  opacity: 0
+}
+#contactsPage .text .social a:active svg rect {
+  fill: #000
+}
 #contactsPage .text .social a:not(:last-child) {
   margin-right: 115px
 }
@@ -1837,6 +1889,27 @@ header #menuButton .menuBtn .icon {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto
+}
+#contactsPage .text .social a svg rect {
+  -webkit-transition: fill .3s;
+  -o-transition: fill .3s;
+  transition: fill .3s
+}
+#contactsPage .text .social a p {
+  position: relative
+}
+#contactsPage .text .social a p::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: #000;
+  opacity: 0;
+  -webkit-transition: opacity .3s;
+  -o-transition: opacity .3s;
+  transition: opacity .3s
 }
 #contactsPage .adaptHeightInner {
   padding-top: 75.5%

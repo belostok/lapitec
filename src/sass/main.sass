@@ -202,13 +202,44 @@ body
 	line-height: 20px
 
 .linkHover
-	font-weight: 400
-	transition: font-weight .3s, color .3s
+	transition: color .3s
 	&:hover
-		font-weight: 700
+		font-family: $bold
 	&:active
-		font-weight: 700
+		font-family: $bold
 		color: $brown
+
+.animatedBtn
+	border: 1px solid $black
+	position: relative
+	z-index: 1
+	overflow: hidden
+	transition: .3s
+	&::after
+		content: ''
+		background: $white
+		position: absolute
+		z-index: -1
+		display: block
+		padding: 10px 40px
+		top: 0
+		bottom: 0
+		left: -100%
+		right: 100%
+		transition: .3s
+	&:hover
+		color: $black !important
+		&::after
+			left: 0
+			right: 0
+			top: 0
+			bottom: 0
+	&.animatedBtnWhite
+		border: 1px solid $white
+		&::after
+			background: $black
+		&:hover
+			color: white !important
 
 .topMenu
 	position: absolute
@@ -451,7 +482,7 @@ header
 						fill: transparent
 				&:active
 					p
-						font-weight: 700
+						font-family: $bold
 						&::after
 							opacity: 0
 					svg rect
@@ -464,8 +495,6 @@ header
 						transition: fill .3s
 				p
 					position: relative
-					font-weight: 400
-					transition: font-weight .3s
 					&::after
 						content: ''
 						position: absolute
@@ -1341,11 +1370,38 @@ header
 			a
 				display: flex
 				align-items: center
+				&:hover
+					p
+						&::after
+							opacity: 1
+					svg rect
+						fill: transparent
+				&:active
+					p
+						font-family: $bold
+						&::after
+							opacity: 0
+					svg rect
+						fill: black
 				&:not(:last-child)
 					margin-right: 115px
 				svg
 					margin-right: 15px
 					flex: 0 0 auto
+					rect
+						transition: fill .3s
+				p
+					position: relative
+					&::after
+						content: ''
+						position: absolute
+						left: 0
+						right: 0
+						bottom: 0
+						height: 1px
+						background: $black
+						opacity: 0
+						transition: opacity .3s
 	.adaptHeightInner
 		padding-top: 75.5%
 		#map
