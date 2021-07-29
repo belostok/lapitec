@@ -46,6 +46,9 @@ textarea {
 strong {
   font-family: EuclidSquare-Bold
 }
+.ajax-filter-count {
+  display: none
+}
 h2 {
   font: 26px/33px EuclidSquare-Bold;
   letter-spacing: .3em;
@@ -212,6 +215,7 @@ select {
 .showreelButton {
   width: 307px;
   height: 89px;
+  background: 0 0;
   border: 1px solid rgba(255,255,255,.3);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -222,7 +226,23 @@ select {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  margin-top: 215px
+  margin-top: 215px;
+  -webkit-transition: border-color .3s,background .3s;
+  -o-transition: border-color .3s,background .3s;
+  transition: border-color .3s,background .3s
+}
+.showreelButton:hover {
+  background: rgba(255,255,255,.1)
+}
+.showreelButton:active {
+  background: rgba(255,255,255,.7);
+  border-color: rgba(255,255,255,.7)
+}
+.showreelButton:active p {
+  color: #000
+}
+.showreelButton:active svg path {
+  fill: #000
 }
 .showreelButton p {
   font-size: 14px;
@@ -230,10 +250,18 @@ select {
   letter-spacing: .3em;
   text-transform: uppercase;
   color: #fff;
-  margin-right: 53px
+  margin-right: 53px;
+  -webkit-transition: color .3s;
+  -o-transition: color .3s;
+  transition: color .3s
 }
 .showreelButton p strong {
   display: block
+}
+.showreelButton svg path {
+  -webkit-transition: fill .3s;
+  -o-transition: fill .3s;
+  transition: fill .3s
 }
 body,
 html {
@@ -246,6 +274,19 @@ body {
   color: #000;
   font-size: 16px;
   line-height: 20px
+}
+.linkHover {
+  font-weight: 400;
+  -webkit-transition: font-weight .3s,color .3s;
+  -o-transition: font-weight .3s,color .3s;
+  transition: font-weight .3s,color .3s
+}
+.linkHover:hover {
+  font-weight: 700
+}
+.linkHover:active {
+  font-weight: 700;
+  color: #796a63
 }
 .topMenu {
   position: absolute;
@@ -467,6 +508,31 @@ header #menuButton.active .menuBtn.opened {
 header #menuButton.active .menuBtn.closed {
   opacity: 0
 }
+header #menuButton:not(.active) .menuBtn.closed {
+  z-index: 1
+}
+header #menuButton:not(.active) .menuBtn.closed svg path {
+  -webkit-transition: fill .3s,stroke .3s;
+  -o-transition: fill .3s,stroke .3s;
+  transition: fill .3s,stroke .3s
+}
+header #menuButton:not(.active) .menuBtn.closed:hover svg path {
+  fill: transparent
+}
+header #menuButton:not(.active) .menuBtn.closed:hover p::after {
+  opacity: 1
+}
+header #menuButton:not(.active) .menuBtn.closed:active svg path {
+  fill: #796a63;
+  stroke: #796a63
+}
+header #menuButton:not(.active) .menuBtn.closed:active p {
+  color: #796a63
+}
+header #menuButton:not(.active) .menuBtn.closed:active p::after {
+  opacity: 1;
+  background: #796a63
+}
 header #menuButton .menuBtn {
   position: absolute;
   right: 0;
@@ -486,7 +552,24 @@ header #menuButton .menuBtn.opened {
 }
 header #menuButton .menuBtn p {
   margin-right: 16px;
-  letter-spacing: .1em
+  letter-spacing: .1em;
+  position: relative;
+  -webkit-transition: color .3s;
+  -o-transition: color .3s;
+  transition: color .3s
+}
+header #menuButton .menuBtn p::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: #000;
+  opacity: 0;
+  -webkit-transition: background .3s,opacity .3s;
+  -o-transition: background .3s,opacity .3s;
+  transition: background .3s,opacity .3s
 }
 header #menuButton .menuBtn .icon {
   width: 35px;
@@ -527,11 +610,51 @@ header #menuButton .menuBtn .icon {
   -ms-flex-align: center;
   align-items: center
 }
+#title .leftCol .social .item:hover p::after {
+  opacity: 1
+}
+#title .leftCol .social .item:hover svg rect {
+  fill: transparent
+}
+#title .leftCol .social .item:active p {
+  font-weight: 700
+}
+#title .leftCol .social .item:active p::after {
+  opacity: 0
+}
+#title .leftCol .social .item:active svg rect {
+  fill: #000
+}
 #title .leftCol .social .item:not(:last-child) {
   margin-right: 80px
 }
 #title .leftCol .social .item svg {
   margin-right: 15px
+}
+#title .leftCol .social .item svg rect {
+  -webkit-transition: fill .3s;
+  -o-transition: fill .3s;
+  transition: fill .3s
+}
+#title .leftCol .social .item p {
+  position: relative;
+  font-weight: 400;
+  -webkit-transition: font-weight .3s;
+  -o-transition: font-weight .3s;
+  transition: font-weight .3s
+}
+#title .leftCol .social .item p::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: #000;
+  opacity: 0;
+  -webkit-transition: opacity .3s;
+  -o-transition: opacity .3s;
+  transition: opacity .3s
 }
 #title .rightCol {
   width: 100%
@@ -756,7 +879,33 @@ header #menuButton .menuBtn .icon {
   align-items: center;
   cursor: pointer;
   border: 2px solid #000;
-  background: #fff
+  background: #fff;
+  -webkit-transition: border-color .3s,background .3s;
+  -o-transition: border-color .3s,background .3s;
+  transition: border-color .3s,background .3s
+}
+#projects .sliderContainer .navigation .next svg path,
+#projects .sliderContainer .navigation .prev svg path {
+  -webkit-transition: fill .3s;
+  -o-transition: fill .3s;
+  transition: fill .3s
+}
+#projects .sliderContainer .navigation .next:hover,
+#projects .sliderContainer .navigation .prev:hover {
+  background: #000
+}
+#projects .sliderContainer .navigation .next:hover svg path,
+#projects .sliderContainer .navigation .prev:hover svg path {
+  fill: #fff
+}
+#projects .sliderContainer .navigation .next:active,
+#projects .sliderContainer .navigation .prev:active {
+  background: #796a63;
+  border-color: #796a63
+}
+#projects .sliderContainer .navigation .next:active svg path,
+#projects .sliderContainer .navigation .prev:active svg path {
+  fill: #fff
 }
 #projects .sliderContainer .navigation .next {
   margin-left: -2px
@@ -910,6 +1059,15 @@ header #menuButton .menuBtn .icon {
   -ms-flex-align: end;
   align-items: flex-end
 }
+#collections .collections .item:hover .text .arrow {
+  width: 160px
+}
+#collections .collections .item:active .text h3 {
+  color: #796a63
+}
+#collections .collections .item:active .text .arrow {
+  width: 160px
+}
 #collections .collections .item .text {
   padding: 60px;
   position: relative
@@ -918,7 +1076,34 @@ header #menuButton .menuBtn .icon {
   font-size: 20px;
   line-height: 25px;
   letter-spacing: .2em;
-  margin-bottom: 60px
+  margin-bottom: 60px;
+  -webkit-transition: color .3s;
+  -o-transition: color .3s;
+  transition: color .3s
+}
+#collections .collections .item .text .arrow {
+  width: 92px;
+  height: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  -webkit-transition: width .3s ease-out;
+  -o-transition: width .3s ease-out;
+  transition: width .3s ease-out
+}
+#collections .collections .item .text .arrow::before {
+  content: '';
+  height: 2px;
+  width: 100%;
+  background: #000
+}
+#collections .collections .item .text .arrow svg {
+  position: absolute;
+  right: 0
 }
 #contacts {
   margin-top: 110px
@@ -1142,7 +1327,7 @@ header #menuButton .menuBtn .icon {
   font-size: 14px;
   line-height: 18px
 }
-#aboutFeatures .imageContainer .text button {
+#aboutFeatures .imageContainer .text .button {
   margin-top: 90px
 }
 #aboutFeatures .aboutFeatures h2 {
@@ -2173,6 +2358,9 @@ header #menuButton .menuBtn .icon {
 }
 #bioPageTitle {
   padding-bottom: 110px
+}
+#bioPageTitle .title h1 {
+  max-width: 340px
 }
 #bioTitle .adaptHeightInner {
   padding-top: 54%

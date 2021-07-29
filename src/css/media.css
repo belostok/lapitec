@@ -701,7 +701,7 @@
     -ms-flex-align: start;
     align-items: flex-start
   }
-  #aboutFeatures .imageContainer .text button,
+  #aboutFeatures .imageContainer .text .button,
   #aboutFeatures .imageContainer .text p {
     margin-top: 30px
   }
